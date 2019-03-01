@@ -150,6 +150,33 @@ src/array_list.c.s:
 	$(MAKE) -f CMakeFiles/data_structure.dir/build.make CMakeFiles/data_structure.dir/src/array_list.c.s
 .PHONY : src/array_list.c.s
 
+src/common.o: src/common.c.o
+
+.PHONY : src/common.o
+
+# target to build an object file
+src/common.c.o:
+	$(MAKE) -f CMakeFiles/data_structure.dir/build.make CMakeFiles/data_structure.dir/src/common.c.o
+.PHONY : src/common.c.o
+
+src/common.i: src/common.c.i
+
+.PHONY : src/common.i
+
+# target to preprocess a source file
+src/common.c.i:
+	$(MAKE) -f CMakeFiles/data_structure.dir/build.make CMakeFiles/data_structure.dir/src/common.c.i
+.PHONY : src/common.c.i
+
+src/common.s: src/common.c.s
+
+.PHONY : src/common.s
+
+# target to generate assembly for a file
+src/common.c.s:
+	$(MAKE) -f CMakeFiles/data_structure.dir/build.make CMakeFiles/data_structure.dir/src/common.c.s
+.PHONY : src/common.c.s
+
 src/linked_list.o: src/linked_list.c.o
 
 .PHONY : src/linked_list.o
@@ -189,6 +216,9 @@ help:
 	@echo "... src/array_list.o"
 	@echo "... src/array_list.i"
 	@echo "... src/array_list.s"
+	@echo "... src/common.o"
+	@echo "... src/common.i"
+	@echo "... src/common.s"
 	@echo "... src/linked_list.o"
 	@echo "... src/linked_list.i"
 	@echo "... src/linked_list.s"

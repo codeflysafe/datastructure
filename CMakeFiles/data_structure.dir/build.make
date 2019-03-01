@@ -83,19 +83,34 @@ CMakeFiles/data_structure.dir/src/linked_list.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/data_structure.dir/src/linked_list.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Volumes/doc/projects/c/data_structure/src/linked_list.c -o CMakeFiles/data_structure.dir/src/linked_list.c.s
 
+CMakeFiles/data_structure.dir/src/common.c.o: CMakeFiles/data_structure.dir/flags.make
+CMakeFiles/data_structure.dir/src/common.c.o: src/common.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Volumes/doc/projects/c/data_structure/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/data_structure.dir/src/common.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/data_structure.dir/src/common.c.o   -c /Volumes/doc/projects/c/data_structure/src/common.c
+
+CMakeFiles/data_structure.dir/src/common.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/data_structure.dir/src/common.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Volumes/doc/projects/c/data_structure/src/common.c > CMakeFiles/data_structure.dir/src/common.c.i
+
+CMakeFiles/data_structure.dir/src/common.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/data_structure.dir/src/common.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Volumes/doc/projects/c/data_structure/src/common.c -o CMakeFiles/data_structure.dir/src/common.c.s
+
 # Object files for target data_structure
 data_structure_OBJECTS = \
 "CMakeFiles/data_structure.dir/src/array_list.c.o" \
-"CMakeFiles/data_structure.dir/src/linked_list.c.o"
+"CMakeFiles/data_structure.dir/src/linked_list.c.o" \
+"CMakeFiles/data_structure.dir/src/common.c.o"
 
 # External object files for target data_structure
 data_structure_EXTERNAL_OBJECTS =
 
 libdata_structure.a: CMakeFiles/data_structure.dir/src/array_list.c.o
 libdata_structure.a: CMakeFiles/data_structure.dir/src/linked_list.c.o
+libdata_structure.a: CMakeFiles/data_structure.dir/src/common.c.o
 libdata_structure.a: CMakeFiles/data_structure.dir/build.make
 libdata_structure.a: CMakeFiles/data_structure.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Volumes/doc/projects/c/data_structure/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library libdata_structure.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Volumes/doc/projects/c/data_structure/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libdata_structure.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/data_structure.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/data_structure.dir/link.txt --verbose=$(VERBOSE)
 

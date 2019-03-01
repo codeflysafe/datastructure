@@ -134,7 +134,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="data_structure" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="data_structure" TARGET_NAME="data_structure" CONFIG_NAME="Debug">
+    <configuration name="Data_structure" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="data_structure" TARGET_NAME="Data_structure" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>

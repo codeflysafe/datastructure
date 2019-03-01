@@ -1,3 +1,5 @@
 /Volumes/doc/projects/c/data_structure/CMakeFiles/rebuild_cache.dir
 /Volumes/doc/projects/c/data_structure/CMakeFiles/edit_cache.dir
-/Volumes/doc/projects/c/data_structure/CMakeFiles/data_structure.dir
+/Volumes/doc/projects/c/data_structure/src/CMakeFiles/rebuild_cache.dir
+/Volumes/doc/projects/c/data_structure/src/CMakeFiles/edit_cache.dir
+/Volumes/doc/projects/c/data_structure/src/CMakeFiles/Data_structure.dir

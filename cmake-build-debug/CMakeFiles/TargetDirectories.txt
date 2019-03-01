@@ -1,3 +1,0 @@
-/Volumes/doc/projects/c/data_structure/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Volumes/doc/projects/c/data_structure/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Volumes/doc/projects/c/data_structure/cmake-build-debug/CMakeFiles/data_structure.dir

@@ -1,6 +1,18 @@
-cmake_minimum_required(VERSION 3.12)
-project(data_structure C)
+cmake_minimum_required(VERSION 3.5)
 
-set(CMAKE_C_STANDARD 99)
+# 项目信息
+project(data_structure)
 
-add_library(data_structure src/include/array_list.h src/include/linked_list.h src/array_list.c src/linked_list.c src/include/common.h src/common.c)
+# 添加 src 子目录
+add_subdirectory(src)
+
+# aux_source_directory(. DIR_SRCS)
+
+# add_executable(Demo ${DIR_SRCS})
+
+# target_link_libraries(Demo ${EXTRA_LIBS})
+
+# 指定安装路径
+# install (TARGETS Demo DESTINATION bin)
+# install (FILES "${PROJECT_BINARY_DIR}/config.h"
+#          DESTINATION include)

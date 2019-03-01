@@ -1,2 +1,0 @@
-/usr/bin/ar qc libdata_structure.a  CMakeFiles/data_structure.dir/src/array_list.c.o CMakeFiles/data_structure.dir/src/linked_list.c.o
-/usr/bin/ranlib libdata_structure.a

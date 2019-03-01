@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-02-28 14:21:46
- * @LastEditTime: 2019-03-01 10:23:08
+ * @LastEditTime: 2019-03-01 17:49:25
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -183,7 +183,7 @@ void push_index(Element e, unsigned int index, ArrayList *array)
 {
     if (array->length == array->capacity)
     {
-        array_list_extend(e, array->length * LIST_INCREMENT_RATE);
+        array_list_extend(array, array->length * LIST_INCREMENT_RATE);
     }
     /* Move back the entries following the range to be removed */
     memmove(array->elements[index + 1], array->elements[index], (array->length - index) * sizeof(Element));
@@ -193,7 +193,7 @@ void push_index(Element e, unsigned int index, ArrayList *array)
 
 void array_list_extend(ArrayList *array, unsigned int new_cap)
 {
-    if (new_cap <= cap)
+    if (new_cap <= array->capacity)
     {
         return;
     }

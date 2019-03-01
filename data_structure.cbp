@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="data_structure"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Volumes/doc/projects/c/data_structure"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Volumes/doc/projects/c/data_structure/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Volumes/doc/projects/c/data_structure/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Volumes/doc/projects/c/data_structure/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Volumes/doc/projects/c/data_structure/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Volumes/doc/projects/c/data_structure"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Volumes/doc/projects/c/data_structure/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Volumes/doc/projects/c/data_structure/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Volumes/doc/projects/c/data_structure/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Volumes/doc/projects/c/data_structure/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Volumes/doc/projects/c/data_structure"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Volumes/doc/projects/c/data_structure/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Volumes/doc/projects/c/data_structure/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Volumes/doc/projects/c/data_structure/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Volumes/doc/projects/c/data_structure/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Data_structure">
+				<Option output="/Volumes/doc/projects/c/data_structure/src/libData_structure.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Volumes/doc/projects/c/data_structure/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Volumes/doc/projects/c/data_structure/src/Makefile&quot;  VERBOSE=1 Data_structure"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Volumes/doc/projects/c/data_structure/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Volumes/doc/projects/c/data_structure/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Volumes/doc/projects/c/data_structure/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Data_structure/fast">
+				<Option output="/Volumes/doc/projects/c/data_structure/src/libData_structure.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Volumes/doc/projects/c/data_structure/src"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Volumes/doc/projects/c/data_structure/src/Makefile&quot;  VERBOSE=1 Data_structure/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Volumes/doc/projects/c/data_structure/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Volumes/doc/projects/c/data_structure/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Volumes/doc/projects/c/data_structure/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Volumes/doc/projects/c/data_structure/src/array_list.c">
+			<Option target="Data_structure"/>
+		</Unit>
+		<Unit filename="/Volumes/doc/projects/c/data_structure/src/common.c">
+			<Option target="Data_structure"/>
+		</Unit>
+		<Unit filename="/Volumes/doc/projects/c/data_structure/src/linked_list.c">
+			<Option target="Data_structure"/>
+		</Unit>
+		<Unit filename="/Volumes/doc/projects/c/data_structure/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Volumes/doc/projects/c/data_structure/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

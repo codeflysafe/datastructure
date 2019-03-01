@@ -1,12 +1,17 @@
 [
 {
-  "directory": "/Volumes/doc/projects/c/data_structure/build",
-  "command": "/usr/bin/clang   -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -std=gnu99 -o CMakeFiles/data_structure.dir/src/array_list.c.o   -c /Volumes/doc/projects/c/data_structure/src/array_list.c",
+  "directory": "/Volumes/doc/projects/c/data_structure/build/src",
+  "command": "/usr/bin/clang   -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -o CMakeFiles/Data_structure.dir/array_list.c.o   -c /Volumes/doc/projects/c/data_structure/src/array_list.c",
   "file": "/Volumes/doc/projects/c/data_structure/src/array_list.c"
 },
 {
-  "directory": "/Volumes/doc/projects/c/data_structure/build",
-  "command": "/usr/bin/clang   -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -std=gnu99 -o CMakeFiles/data_structure.dir/src/linked_list.c.o   -c /Volumes/doc/projects/c/data_structure/src/linked_list.c",
+  "directory": "/Volumes/doc/projects/c/data_structure/build/src",
+  "command": "/usr/bin/clang   -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -o CMakeFiles/Data_structure.dir/common.c.o   -c /Volumes/doc/projects/c/data_structure/src/common.c",
+  "file": "/Volumes/doc/projects/c/data_structure/src/common.c"
+},
+{
+  "directory": "/Volumes/doc/projects/c/data_structure/build/src",
+  "command": "/usr/bin/clang   -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -o CMakeFiles/Data_structure.dir/linked_list.c.o   -c /Volumes/doc/projects/c/data_structure/src/linked_list.c",
   "file": "/Volumes/doc/projects/c/data_structure/src/linked_list.c"
 }
 ]

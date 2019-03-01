@@ -3,10 +3,11 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-02-28 14:21:46
- * @LastEditTime: 2019-03-01 08:46:56
+ * @LastEditTime: 2019-03-01 09:39:13
  */
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "include/array_list.h"
 
 /**
@@ -20,10 +21,10 @@ ArrayList *empty_list()
 /**
  *  build an array whose capacity is cap
  **/
-ArrayList *array_list_new(int cap)
+ArrayList *array_list_new(unsigned int cap)
 {
 
-    if (cap <= 0)
+    if (cap == 0)
     {
         cap = LIST_INIT_CAPACITY;
     }
@@ -76,7 +77,7 @@ boolean is_empty(ArrayList *array)
 /**
  * return 1 or 0 if idx is the last index of array
  * */
-boolean is_last(int idx, ArrayList *array)
+boolean is_last(unsigned int idx, ArrayList *array)
 {
     return array->length == 1 + idx ? 1 : 0;
 }
@@ -85,7 +86,7 @@ boolean is_last(int idx, ArrayList *array)
  * return the index of the element or -1 if not exitsis;
  * O(N)
  * */
-int find(Element e, ArrayList *array, compare_func cmp)
+int index_of_array(Element e, ArrayList *array, compare_func cmp)
 {
     for (int i = 0; i < array->length; ++i)
     {
@@ -96,6 +97,19 @@ int find(Element e, ArrayList *array, compare_func cmp)
     }
     return -1;
 }
+
+/**
+ * @description: 
+ * @param {type} 
+ * @return: 
+ */
+Element find(unsigned int index, ArrayList *array)
+{
+    if (index >= array->length)
+        return NULL;
+    return array->elements[index];
+}
+
 /**
  * @description: remove one element from an array by index ;
  * @param {int index}   the index 
@@ -103,13 +117,13 @@ int find(Element e, ArrayList *array, compare_func cmp)
  * @param {compare_func cmp} 
  * @return: 
  */
-void delete_one(int index, ArrayList *array, compare_func cmp)
+void delete_one(unsigned int index, ArrayList *array)
 {
     if (index >= array->length)
     {
         return;
     }
-    gitz
+    return delete_many(index, 1, array);
 }
 
 /**
@@ -121,12 +135,37 @@ void delete_one(int index, ArrayList *array, compare_func cmp)
  */
 void delete_value(Element e, ArrayList *array, compare_func cmp)
 {
-    int idx = find(e, array, cmp);
+    int idx = index_of_array(e, array, cmp);
     if (idx == -1)
     {
         return;
     }
-    delete_one(idx, array, cmp);
+    delete_one(idx, array);
+}
+
+/**
+ * @description: delete a range from array
+ * @param {int index} 
+ * @param {int offset} always is positive number 
+ * @param {ArrayList *array} 
+ * @param {compare_func cmp}  compare function
+ * @return: 
+ */
+void delete_many(unsigned int index, unsigned int offset, ArrayList *array)
+{
+    if (index < 0 || (offset + index) > array->length)
+        return;
+
+    /* Move back the entries following the range to be removed */
+    memmove(array->elements[index], array->elements[index + offset], (array->length - (index + offset)) * sizeof(Element));
+}
+
+/**
+ * insert the element in array; always in tail;
+ * */
+void push_back(Element e, ArrayList *array)
+{
+    return push_index(e, array->length, array);
 }
 
 /**
@@ -134,24 +173,27 @@ void delete_value(Element e, ArrayList *array, compare_func cmp)
  * @param {type} 
  * @return: 
  */
-void delete_many(int start, int end, ArrayList *array, int (*cmp)(Element e1, Element e2))
+void push_front(Element e, ArrayList *array)
 {
+    return push_index(e, 0, array);
 }
 
 /**
- * insert the element in array; always in tail;
+ * insert the element in array;
  * */
-void insert(Element e, ArrayList *array)
+void push_index(Element e, unsigned int index, ArrayList *array)
 {
     if (array->length == array->capacity)
     {
-        array_list_extend(array, array->capacity * 2);
+        array_list_extend(e, array->length * 2);
     }
-    array->elements[array->length - 1] = e;
+    /* Move back the entries following the range to be removed */
+    memmove(array->elements[index + 1], array->elements[index], (array->length - index) * sizeof(Element));
+    array->elements[index] = e;
     ++array->length;
 }
 
-void array_list_extend(ArrayList *array, int new_cap)
+void array_list_extend(ArrayList *array, unsigned int new_cap)
 {
     if (new_cap <= cap)
     {
@@ -181,7 +223,8 @@ void clear(ArrayList *array)
     }
 }
 
-ArrayList *sort(ArrayList *array, int desc)
+// todo qsort 
+void sort(ArrayList *array, boolean desc, compare_func cmp)
 {
-    return array;
+    return;
 }

@@ -3,6 +3,8 @@
     "files.associations": {
         "array_list.h": "c",
         "linked_list.h": "c",
-        "common.h": "c"
+        "common.h": "c",
+        "stdlib.h": "c",
+        "string.h": "c"
     }
 }

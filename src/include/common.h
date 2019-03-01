@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-02-28 14:40:32
- * @LastEditTime: 2019-02-28 20:37:23
+ * @LastEditTime: 2019-03-01 09:49:28
  */
 #ifndef DATA_STRUCTURE_COMMON_H
 #define DATA_STRUCTURE_COMMON_H
@@ -29,8 +29,10 @@ typedef int (*compare_func)(const Element e1, const Element e2);
 // compara values
 int common_cmp_str(const Element key1, const Element key2);
 int common_cmp_ptr(const Element key1, const Element key2);
+void swap(Element *e1, Element *e2);
 
 #define COMMON_CMP_STR common_cmp_str;
 #define COMMON_CMP_PTR common_cmp_ptr;
+#define Swap swap;
 
 #endif //DATA_STRUCTURE_COMMON_H

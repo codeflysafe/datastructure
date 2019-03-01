@@ -3,8 +3,9 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-02-28 19:50:08
- * @LastEditTime: 2019-02-28 20:34:31
+ * @LastEditTime: 2019-03-01 09:56:19
  */
+#include <string.h>
 #include "include/common.h"
 
 /**
@@ -38,4 +39,17 @@ int common_cmp_ptr(const Element key1, const Element key2)
     {
         return 0;
     }
+}
+
+/**
+ * @description: swap two element 
+ * @param {type} 
+ * @return: 
+ */
+void swap(Element *e1, Element *e2)
+{
+
+    Element e = e1;
+    e1 = e2;
+    e2 = e;
 }

@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-02-28 14:21:46
- * @LastEditTime: 2019-03-01 09:39:13
+ * @LastEditTime: 2019-03-01 10:23:08
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -50,10 +50,8 @@ ArrayList *array_list_new(unsigned int cap)
     return temp;
 }
 
-/**
- * return the length of array
- **/
-int len(ArrayList *array)
+
+unsigned int len(ArrayList *array)
 {
     return array->length;
 }
@@ -61,7 +59,7 @@ int len(ArrayList *array)
 /**
  * return the capacity of array
  **/
-int cap(ArrayList *array)
+unsigned int cap(ArrayList *array)
 {
     return array->capacity;
 }
@@ -185,7 +183,7 @@ void push_index(Element e, unsigned int index, ArrayList *array)
 {
     if (array->length == array->capacity)
     {
-        array_list_extend(e, array->length * 2);
+        array_list_extend(e, array->length * LIST_INCREMENT_RATE);
     }
     /* Move back the entries following the range to be removed */
     memmove(array->elements[index + 1], array->elements[index], (array->length - index) * sizeof(Element));
@@ -223,8 +221,54 @@ void clear(ArrayList *array)
     }
 }
 
-// todo qsort 
+/**
+ * @description: array reverse ; two pointer to array 
+ * @param {ArrayList *array} 
+ * @return: 
+ */
+void reverse(ArrayList *array)
+{
+
+    unsigned int left = 0, right = array->length;
+    while (left <= right)
+    {
+        Swap(array->elements[left], array->elements[right]);
+        left++;
+        right--;
+    }
+}
+
+/**
+ * @description: simple q sort
+ * @param {type} 
+ * @return: 
+ */
+void q_sort(ArrayList *array, unsigned int left, unsigned int right, boolean desc, compare_func cmp)
+{
+    if (left >= right)
+        return;
+
+    // first select the mid one as the datum mark
+    unsigned int mid = (left + right) / 2, startIndex = left;
+    // swap
+    Swap(array->elements[right], array->elements[mid]);
+    for (unsigned int i = left; i < right; i++)
+    {
+        if ((desc == 0 && (cmp(array->elements[i], array->elements[right]) < 0)) || ((desc == 1) && (cmp(array->elements[i], array->elements[right]) > 0)))
+        {
+            Swap(array->elements[startIndex++], array->elements[i]);
+        }
+    }
+
+    // swap the
+    Swap(array->elements[right], array->elements[startIndex]);
+    q_sort(array, left, startIndex - 1, desc, cmp);
+    q_sort(array, startIndex + 1, right, desc, cmp);
+}
+
+// todo qsort
 void sort(ArrayList *array, boolean desc, compare_func cmp)
 {
-    return;
+    q_sort(array, 0, array->length - 1, desc, cmp);
 }
+

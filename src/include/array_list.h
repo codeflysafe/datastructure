@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-02-28 14:20:59
- * @LastEditTime: 2019-03-01 09:38:48
+ * @LastEditTime: 2019-03-01 10:12:58
  */
 
 #ifndef DATA_STRUCTURE_ARRAYLIST_H
@@ -17,8 +17,8 @@
 typedef struct array_list
 {
     Element *elements;
-    int length;
-    int capacity;
+    unsigned int length;
+    unsigned int capacity;
 } ArrayList;
 
 /**
@@ -34,12 +34,12 @@ ArrayList *array_list_new(unsigned int cap);
 /**
  * return the length of array
  **/
-int len(ArrayList *array);
+unsigned int len(ArrayList *array);
 
 /**
  * return the capacity of array
  **/
-int cap(ArrayList *array);
+unsigned int cap(ArrayList *array);
 
 /**
  * return 1  or 0 if it's empty 
@@ -101,15 +101,22 @@ void clear(ArrayList *array);
 void array_list_extend(ArrayList *array, unsigned int cap);
 
 /**
- * reserve the array
+ * reverse the array
  * */
-void reserve(ArrayList *array);
+void reverse(ArrayList *array);
+
+/**
+ * @description: 
+ * @param {type} 
+ * @return: 
+ */
+void q_sort(ArrayList *array, unsigned int left, unsigned int right, boolean desc, compare_func cmp);
 
 /**
  * @description: sort the array; desc or asc
  * @param {type} 
  * @return: 
  */
-void sort(ArrayList *array, boolean desc,compare_func cmp);
+void sort(ArrayList *array, boolean desc, compare_func cmp);
 
 #endif //DATA_STRUCTURE_ARRAYLIST_H

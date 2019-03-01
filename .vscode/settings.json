@@ -5,6 +5,9 @@
         "linked_list.h": "c",
         "common.h": "c",
         "stdlib.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "__functional_03": "c",
+        "__mutex_base": "c",
+        "memory": "c"
     }
 }

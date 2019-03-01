@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libData_structure_test.a  CMakeFiles/Data_structure_test.dir/alloc-testing.c.o CMakeFiles/Data_structure_test.dir/array_list_test.c.o CMakeFiles/Data_structure_test.dir/framework.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libData_structure_test.a

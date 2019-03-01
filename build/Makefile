@@ -56,52 +56,6 @@ CMAKE_BINARY_DIR = /Volumes/doc/projects/c/data_structure/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/Cellar/cmake/3.13.4/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/Cellar/cmake/3.13.4/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/local/Cellar/cmake/3.13.4/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/local/Cellar/cmake/3.13.4/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/Cellar/cmake/3.13.4/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/Cellar/cmake/3.13.4/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -157,17 +111,43 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Data_structure
+# Target rules for targets named data_structure_c_static
 
 # Build rule for target.
-Data_structure: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Data_structure
-.PHONY : Data_structure
+data_structure_c_static: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 data_structure_c_static
+.PHONY : data_structure_c_static
 
 # fast build rule for target.
-Data_structure/fast:
-	$(MAKE) -f src/CMakeFiles/Data_structure.dir/build.make src/CMakeFiles/Data_structure.dir/build
-.PHONY : Data_structure/fast
+data_structure_c_static/fast:
+	$(MAKE) -f src/CMakeFiles/data_structure_c_static.dir/build.make src/CMakeFiles/data_structure_c_static.dir/build
+.PHONY : data_structure_c_static/fast
+
+#=============================================================================
+# Target rules for targets named data_structure_c
+
+# Build rule for target.
+data_structure_c: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 data_structure_c
+.PHONY : data_structure_c
+
+# fast build rule for target.
+data_structure_c/fast:
+	$(MAKE) -f src/CMakeFiles/data_structure_c.dir/build.make src/CMakeFiles/data_structure_c.dir/build
+.PHONY : data_structure_c/fast
+
+#=============================================================================
+# Target rules for targets named Data_structure_test
+
+# Build rule for target.
+Data_structure_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Data_structure_test
+.PHONY : Data_structure_test
+
+# fast build rule for target.
+Data_structure_test/fast:
+	$(MAKE) -f test/CMakeFiles/Data_structure_test.dir/build.make test/CMakeFiles/Data_structure_test.dir/build
+.PHONY : Data_structure_test/fast
 
 # Help Target
 help:
@@ -175,13 +155,11 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... install"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Data_structure"
+	@echo "... data_structure_c_static"
+	@echo "... data_structure_c"
+	@echo "... Data_structure_test"
 .PHONY : help
 
 

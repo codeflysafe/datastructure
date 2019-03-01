@@ -56,52 +56,6 @@ CMAKE_BINARY_DIR = /Volumes/doc/projects/c/data_structure/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/Cellar/cmake/3.13.4/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/Cellar/cmake/3.13.4/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/local/Cellar/cmake/3.13.4/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/local/Cellar/cmake/3.13.4/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/Cellar/cmake/3.13.4/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/Cellar/cmake/3.13.4/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -157,19 +111,34 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/CMakeFiles/Data_structure.dir/rule:
-	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/Data_structure.dir/rule
-.PHONY : src/CMakeFiles/Data_structure.dir/rule
+src/CMakeFiles/data_structure_c_static.dir/rule:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/data_structure_c_static.dir/rule
+.PHONY : src/CMakeFiles/data_structure_c_static.dir/rule
 
 # Convenience name for target.
-Data_structure: src/CMakeFiles/Data_structure.dir/rule
+data_structure_c_static: src/CMakeFiles/data_structure_c_static.dir/rule
 
-.PHONY : Data_structure
+.PHONY : data_structure_c_static
 
 # fast build rule for target.
-Data_structure/fast:
-	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/Data_structure.dir/build.make src/CMakeFiles/Data_structure.dir/build
-.PHONY : Data_structure/fast
+data_structure_c_static/fast:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/data_structure_c_static.dir/build.make src/CMakeFiles/data_structure_c_static.dir/build
+.PHONY : data_structure_c_static/fast
+
+# Convenience name for target.
+src/CMakeFiles/data_structure_c.dir/rule:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/data_structure_c.dir/rule
+.PHONY : src/CMakeFiles/data_structure_c.dir/rule
+
+# Convenience name for target.
+data_structure_c: src/CMakeFiles/data_structure_c.dir/rule
+
+.PHONY : data_structure_c
+
+# fast build rule for target.
+data_structure_c/fast:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/data_structure_c.dir/build.make src/CMakeFiles/data_structure_c.dir/build
+.PHONY : data_structure_c/fast
 
 array_list.o: array_list.c.o
 
@@ -177,7 +146,8 @@ array_list.o: array_list.c.o
 
 # target to build an object file
 array_list.c.o:
-	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/Data_structure.dir/build.make src/CMakeFiles/Data_structure.dir/array_list.c.o
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/data_structure_c_static.dir/build.make src/CMakeFiles/data_structure_c_static.dir/array_list.c.o
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/data_structure_c.dir/build.make src/CMakeFiles/data_structure_c.dir/array_list.c.o
 .PHONY : array_list.c.o
 
 array_list.i: array_list.c.i
@@ -186,7 +156,8 @@ array_list.i: array_list.c.i
 
 # target to preprocess a source file
 array_list.c.i:
-	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/Data_structure.dir/build.make src/CMakeFiles/Data_structure.dir/array_list.c.i
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/data_structure_c_static.dir/build.make src/CMakeFiles/data_structure_c_static.dir/array_list.c.i
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/data_structure_c.dir/build.make src/CMakeFiles/data_structure_c.dir/array_list.c.i
 .PHONY : array_list.c.i
 
 array_list.s: array_list.c.s
@@ -195,7 +166,8 @@ array_list.s: array_list.c.s
 
 # target to generate assembly for a file
 array_list.c.s:
-	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/Data_structure.dir/build.make src/CMakeFiles/Data_structure.dir/array_list.c.s
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/data_structure_c_static.dir/build.make src/CMakeFiles/data_structure_c_static.dir/array_list.c.s
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/data_structure_c.dir/build.make src/CMakeFiles/data_structure_c.dir/array_list.c.s
 .PHONY : array_list.c.s
 
 common.o: common.c.o
@@ -204,7 +176,8 @@ common.o: common.c.o
 
 # target to build an object file
 common.c.o:
-	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/Data_structure.dir/build.make src/CMakeFiles/Data_structure.dir/common.c.o
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/data_structure_c_static.dir/build.make src/CMakeFiles/data_structure_c_static.dir/common.c.o
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/data_structure_c.dir/build.make src/CMakeFiles/data_structure_c.dir/common.c.o
 .PHONY : common.c.o
 
 common.i: common.c.i
@@ -213,7 +186,8 @@ common.i: common.c.i
 
 # target to preprocess a source file
 common.c.i:
-	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/Data_structure.dir/build.make src/CMakeFiles/Data_structure.dir/common.c.i
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/data_structure_c_static.dir/build.make src/CMakeFiles/data_structure_c_static.dir/common.c.i
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/data_structure_c.dir/build.make src/CMakeFiles/data_structure_c.dir/common.c.i
 .PHONY : common.c.i
 
 common.s: common.c.s
@@ -222,7 +196,8 @@ common.s: common.c.s
 
 # target to generate assembly for a file
 common.c.s:
-	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/Data_structure.dir/build.make src/CMakeFiles/Data_structure.dir/common.c.s
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/data_structure_c_static.dir/build.make src/CMakeFiles/data_structure_c_static.dir/common.c.s
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/data_structure_c.dir/build.make src/CMakeFiles/data_structure_c.dir/common.c.s
 .PHONY : common.c.s
 
 linked_list.o: linked_list.c.o
@@ -231,7 +206,8 @@ linked_list.o: linked_list.c.o
 
 # target to build an object file
 linked_list.c.o:
-	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/Data_structure.dir/build.make src/CMakeFiles/Data_structure.dir/linked_list.c.o
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/data_structure_c_static.dir/build.make src/CMakeFiles/data_structure_c_static.dir/linked_list.c.o
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/data_structure_c.dir/build.make src/CMakeFiles/data_structure_c.dir/linked_list.c.o
 .PHONY : linked_list.c.o
 
 linked_list.i: linked_list.c.i
@@ -240,7 +216,8 @@ linked_list.i: linked_list.c.i
 
 # target to preprocess a source file
 linked_list.c.i:
-	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/Data_structure.dir/build.make src/CMakeFiles/Data_structure.dir/linked_list.c.i
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/data_structure_c_static.dir/build.make src/CMakeFiles/data_structure_c_static.dir/linked_list.c.i
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/data_structure_c.dir/build.make src/CMakeFiles/data_structure_c.dir/linked_list.c.i
 .PHONY : linked_list.c.i
 
 linked_list.s: linked_list.c.s
@@ -249,7 +226,8 @@ linked_list.s: linked_list.c.s
 
 # target to generate assembly for a file
 linked_list.c.s:
-	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/Data_structure.dir/build.make src/CMakeFiles/Data_structure.dir/linked_list.c.s
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/data_structure_c_static.dir/build.make src/CMakeFiles/data_structure_c_static.dir/linked_list.c.s
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/data_structure_c.dir/build.make src/CMakeFiles/data_structure_c.dir/linked_list.c.s
 .PHONY : linked_list.c.s
 
 # Help Target
@@ -258,13 +236,10 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... install"
-	@echo "... list_install_components"
-	@echo "... Data_structure"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... data_structure_c_static"
+	@echo "... data_structure_c"
 	@echo "... array_list.o"
 	@echo "... array_list.i"
 	@echo "... array_list.s"

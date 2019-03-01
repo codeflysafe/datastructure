@@ -5,6 +5,7 @@ project(data_structure)
 
 # 添加 src 子目录
 add_subdirectory(src)
+add_subdirectory(test)
 
 # aux_source_directory(. DIR_SRCS)
 

@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Volumes/doc/projects/c/data_structure/src/array_list.c" "/Volumes/doc/projects/c/data_structure/src/CMakeFiles/Data_structure.dir/array_list.c.o"
-  "/Volumes/doc/projects/c/data_structure/src/common.c" "/Volumes/doc/projects/c/data_structure/src/CMakeFiles/Data_structure.dir/common.c.o"
-  "/Volumes/doc/projects/c/data_structure/src/linked_list.c" "/Volumes/doc/projects/c/data_structure/src/CMakeFiles/Data_structure.dir/linked_list.c.o"
+  "/Volumes/doc/projects/c/data_structure/src/array_list.c" "/Volumes/doc/projects/c/data_structure/src/CMakeFiles/Data_structure_src.dir/array_list.c.o"
+  "/Volumes/doc/projects/c/data_structure/src/common.c" "/Volumes/doc/projects/c/data_structure/src/CMakeFiles/Data_structure_src.dir/common.c.o"
+  "/Volumes/doc/projects/c/data_structure/src/linked_list.c" "/Volumes/doc/projects/c/data_structure/src/CMakeFiles/Data_structure_src.dir/linked_list.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

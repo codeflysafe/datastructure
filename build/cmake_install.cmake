@@ -35,6 +35,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/Volumes/doc/projects/c/data_structure/build/src/cmake_install.cmake")
+  include("/Volumes/doc/projects/c/data_structure/build/test/cmake_install.cmake")
 
 endif()
 

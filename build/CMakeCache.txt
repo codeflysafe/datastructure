@@ -203,6 +203,12 @@ data_structure_BINARY_DIR:STATIC=/Volumes/doc/projects/c/data_structure/build
 //Value Computed by CMake
 data_structure_SOURCE_DIR:STATIC=/Volumes/doc/projects/c/data_structure
 
+//Value Computed by CMake
+data_structure_c_BINARY_DIR:STATIC=/Volumes/doc/projects/c/data_structure/build/src
+
+//Value Computed by CMake
+data_structure_c_SOURCE_DIR:STATIC=/Volumes/doc/projects/c/data_structure/src
+
 
 ########################
 # INTERNAL cache entries
@@ -298,7 +304,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

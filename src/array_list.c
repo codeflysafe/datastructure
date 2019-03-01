@@ -138,7 +138,7 @@ void delete_value(Element e, ArrayList *array, compare_func cmp)
     {
         return;
     }
-    delete_one(idx, array);
+    delete_one((unsigned int)idx, array);
 }
 
 /**
@@ -266,7 +266,7 @@ void q_sort(ArrayList *array, unsigned int left, unsigned int right, boolean des
     q_sort(array, startIndex + 1, right, desc, cmp);
 }
 
-// todo qsort
+
 void sort(ArrayList *array, boolean desc, compare_func cmp)
 {
     q_sort(array, 0, array->length - 1, desc, cmp);

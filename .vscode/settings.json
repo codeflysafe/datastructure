@@ -8,6 +8,14 @@
         "string.h": "c",
         "__functional_03": "c",
         "__mutex_base": "c",
-        "memory": "c"
+        "memory": "c",
+        "__debug": "c",
+        "exception": "c",
+        "functional": "c",
+        "ios": "c",
+        "sstream": "c",
+        "streambuf": "c",
+        "string": "c",
+        "assert.h": "c"
     }
 }

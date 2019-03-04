@@ -125,7 +125,7 @@ clean: src/CMakeFiles/data_structure_c_static.dir/clean
 # Target rules for target src/CMakeFiles/data_structure_c.dir
 
 # All Build rule for target.
-src/CMakeFiles/data_structure_c.dir/all:
+src/CMakeFiles/data_structure_c.dir/all: test/CMakeFiles/Data_structure_test.dir/all
 	$(MAKE) -f src/CMakeFiles/data_structure_c.dir/build.make src/CMakeFiles/data_structure_c.dir/depend
 	$(MAKE) -f src/CMakeFiles/data_structure_c.dir/build.make src/CMakeFiles/data_structure_c.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Volumes/doc/projects/c/data_structure/CMakeFiles --progress-num=5,6,7,8 "Built target data_structure_c"
@@ -138,7 +138,7 @@ all: src/CMakeFiles/data_structure_c.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/data_structure_c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Volumes/doc/projects/c/data_structure/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /Volumes/doc/projects/c/data_structure/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/data_structure_c.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Volumes/doc/projects/c/data_structure/CMakeFiles 0
 .PHONY : src/CMakeFiles/data_structure_c.dir/rule

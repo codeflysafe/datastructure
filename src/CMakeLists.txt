@@ -25,7 +25,7 @@ include_directories("./include")
 set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER "${header_files}")
 set_target_properties(${PROJECT_NAME}_static PROPERTIES OUTPUT_NAME ${PROJECT_NAME})
 
-target_link_libraries(${PROJECT_NAME})
+target_link_libraries(${PROJECT_NAME} Data_structure_test)
 
 # 指定 Data_structure 库的安装路径
 # install (TARGETS Data_structure DESTINATION lib)

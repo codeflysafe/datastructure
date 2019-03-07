@@ -109,6 +109,7 @@ src/libdata_structure_c.dylib: src/CMakeFiles/data_structure_c.dir/array_list.c.
 src/libdata_structure_c.dylib: src/CMakeFiles/data_structure_c.dir/common.c.o
 src/libdata_structure_c.dylib: src/CMakeFiles/data_structure_c.dir/linked_list.c.o
 src/libdata_structure_c.dylib: src/CMakeFiles/data_structure_c.dir/build.make
+src/libdata_structure_c.dylib: test/libData_structure_test.a
 src/libdata_structure_c.dylib: src/CMakeFiles/data_structure_c.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Volumes/doc/projects/c/data_structure/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library libdata_structure_c.dylib"
 	cd /Volumes/doc/projects/c/data_structure/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/data_structure_c.dir/link.txt --verbose=$(VERBOSE)

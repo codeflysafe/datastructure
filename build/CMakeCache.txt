@@ -206,6 +206,9 @@ data_structure_SOURCE_DIR:STATIC=/Volumes/doc/projects/c/data_structure
 //Value Computed by CMake
 data_structure_c_BINARY_DIR:STATIC=/Volumes/doc/projects/c/data_structure/build/src
 
+//Dependencies for the target
+data_structure_c_LIB_DEPENDS:STATIC=general;Data_structure_test;
+
 //Value Computed by CMake
 data_structure_c_SOURCE_DIR:STATIC=/Volumes/doc/projects/c/data_structure/src
 

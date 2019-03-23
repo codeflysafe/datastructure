@@ -1,22 +1,44 @@
 # data_structure 
-> 两个部分
 
-## 基础数据结构
+本仓库包含了基础的数据结构以及算法，每一种数据结构以及算法都有自己对应的`md`文档，以及参考链接
 
-1. 表、队列以及栈
-2. 树、AVL树
-3. 哈希表
-4. 图
+注意: 此项目代码**未在生产环境使用过**，仅用于学习和交流。
 
-## 高级数据结构
+## 数据结构
+> 数据结构是计算机体系的基础骨骼部分，是相互之间存在一种或者多种特定关系的数据元素的集合，当然又包含了对应的一些函数或者方法
 
-1. 跳跃表
-2. B树、红黑树、前缀树、线段树。。。
+### list 
+- [x] [array_list](./docs/array_list.md)
+- [ ] [linked_list](./docs/linked_list.md)
+- [ ] [queue](./docs/queue.md)
+- [ ] [stack](./docs/stack.md)
+- [ ] [skip_list](./docs/skip_list.md)
+- [ ] and other ...
+
+### tree
+- [ ] [binary_tree](./docs/binary_tree.md)
+- [ ] [avl_tree](./docs/avl_tree.md)
+- [ ] [heap](./docs/heap.md) min and max heap
+- [ ] [red_black_tree](./docs/red_black_tree.md)
+- [ ] [b_tree](./docs/b_tree.md)
+- [ ] [segment_tree](./docs/segment_tree.md)
+- [ ] [prefix_tree](./docs/prefix_tree.md)
+- [ ]  and other ...
+  
+### map
+- [ ] [hash_table](./docs/hash_table.md) tree_map;hash_table 
+
+### set
+- [ ] [set](./docs/set.md) tree_set;...
+- [ ] [disjoint_set](./docs/disjoint_set.md)
 
 
-## Notice:
+### graph
+- [ ] [graph](./docs/graph.md)
 
-1. `cmake` 参照: https://github.com/srdja/Collections-C/blob/master/src/CMakeLists.txt
-2. 《数据结构》(c 语言版)
-3. 《高级数据结构》
-4. 《数据结构与算法实现》
+
+## 算法
+
+### sorting
+
+- [ ] [bubble_sort](./docs/bubble_sort.md)

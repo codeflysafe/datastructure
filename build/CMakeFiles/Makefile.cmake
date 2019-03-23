@@ -51,7 +51,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "src/CMakeFiles/data_structure_c_static.dir/DependInfo.cmake"
-  "src/CMakeFiles/data_structure_c.dir/DependInfo.cmake"
   "test/CMakeFiles/Data_structure_test.dir/DependInfo.cmake"
   )

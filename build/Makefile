@@ -111,32 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named data_structure_c_static
-
-# Build rule for target.
-data_structure_c_static: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 data_structure_c_static
-.PHONY : data_structure_c_static
-
-# fast build rule for target.
-data_structure_c_static/fast:
-	$(MAKE) -f src/CMakeFiles/data_structure_c_static.dir/build.make src/CMakeFiles/data_structure_c_static.dir/build
-.PHONY : data_structure_c_static/fast
-
-#=============================================================================
-# Target rules for targets named data_structure_c
-
-# Build rule for target.
-data_structure_c: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 data_structure_c
-.PHONY : data_structure_c
-
-# fast build rule for target.
-data_structure_c/fast:
-	$(MAKE) -f src/CMakeFiles/data_structure_c.dir/build.make src/CMakeFiles/data_structure_c.dir/build
-.PHONY : data_structure_c/fast
-
-#=============================================================================
 # Target rules for targets named Data_structure_test
 
 # Build rule for target.
@@ -157,8 +131,6 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... data_structure_c_static"
-	@echo "... data_structure_c"
 	@echo "... Data_structure_test"
 .PHONY : help
 

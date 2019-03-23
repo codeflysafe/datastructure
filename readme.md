@@ -14,3 +14,9 @@
 2. B树、红黑树、前缀树、线段树。。。
 
 
+## Notice:
+
+1. `cmake` 参照: https://github.com/srdja/Collections-C/blob/master/src/CMakeLists.txt
+2. 《数据结构》(c 语言版)
+3. 《高级数据结构》
+4. 《数据结构与算法实现》

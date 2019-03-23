@@ -1,19 +1,14 @@
 cmake_minimum_required(VERSION 3.5)
 
-# 项目信息
-project(data_structure)
+set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)
 
-# 添加 src 子目录
+enable_language(C)
+enable_language(CXX)
+
+set(CFLAGS "-Wall -Werror")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${CFLAGS}")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${CFLAGS}")
+enable_testing()
+
 add_subdirectory(src)
 add_subdirectory(test)
-
-# aux_source_directory(. DIR_SRCS)
-
-# add_executable(Demo ${DIR_SRCS})
-
-# target_link_libraries(Demo ${EXTRA_LIBS})
-
-# 指定安装路径
-# install (TARGETS Demo DESTINATION bin)
-# install (FILES "${PROJECT_BINARY_DIR}/config.h"
-#          DESTINATION include)

@@ -68,14 +68,12 @@ CMAKE_BINARY_DIR = /Volumes/doc/projects/c/data_structure/build
 # Directory level rules for directory src
 
 # Convenience name for "all" pass in the directory.
-src/all: src/CMakeFiles/data_structure_c_static.dir/all
-src/all: src/CMakeFiles/data_structure_c.dir/all
+src/all:
 
 .PHONY : src/all
 
 # Convenience name for "clean" pass in the directory.
-src/clean: src/CMakeFiles/data_structure_c_static.dir/clean
-src/clean: src/CMakeFiles/data_structure_c.dir/clean
+src/clean:
 
 .PHONY : src/clean
 
@@ -83,80 +81,6 @@ src/clean: src/CMakeFiles/data_structure_c.dir/clean
 src/preinstall:
 
 .PHONY : src/preinstall
-
-#=============================================================================
-# Target rules for target src/CMakeFiles/data_structure_c_static.dir
-
-# All Build rule for target.
-src/CMakeFiles/data_structure_c_static.dir/all:
-	$(MAKE) -f src/CMakeFiles/data_structure_c_static.dir/build.make src/CMakeFiles/data_structure_c_static.dir/depend
-	$(MAKE) -f src/CMakeFiles/data_structure_c_static.dir/build.make src/CMakeFiles/data_structure_c_static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Volumes/doc/projects/c/data_structure/build/CMakeFiles --progress-num=9,10,11,12 "Built target data_structure_c_static"
-.PHONY : src/CMakeFiles/data_structure_c_static.dir/all
-
-# Include target in all.
-all: src/CMakeFiles/data_structure_c_static.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-src/CMakeFiles/data_structure_c_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Volumes/doc/projects/c/data_structure/build/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/data_structure_c_static.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Volumes/doc/projects/c/data_structure/build/CMakeFiles 0
-.PHONY : src/CMakeFiles/data_structure_c_static.dir/rule
-
-# Convenience name for target.
-data_structure_c_static: src/CMakeFiles/data_structure_c_static.dir/rule
-
-.PHONY : data_structure_c_static
-
-# clean rule for target.
-src/CMakeFiles/data_structure_c_static.dir/clean:
-	$(MAKE) -f src/CMakeFiles/data_structure_c_static.dir/build.make src/CMakeFiles/data_structure_c_static.dir/clean
-.PHONY : src/CMakeFiles/data_structure_c_static.dir/clean
-
-# clean rule for target.
-clean: src/CMakeFiles/data_structure_c_static.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target src/CMakeFiles/data_structure_c.dir
-
-# All Build rule for target.
-src/CMakeFiles/data_structure_c.dir/all: test/CMakeFiles/Data_structure_test.dir/all
-	$(MAKE) -f src/CMakeFiles/data_structure_c.dir/build.make src/CMakeFiles/data_structure_c.dir/depend
-	$(MAKE) -f src/CMakeFiles/data_structure_c.dir/build.make src/CMakeFiles/data_structure_c.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Volumes/doc/projects/c/data_structure/build/CMakeFiles --progress-num=5,6,7,8 "Built target data_structure_c"
-.PHONY : src/CMakeFiles/data_structure_c.dir/all
-
-# Include target in all.
-all: src/CMakeFiles/data_structure_c.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-src/CMakeFiles/data_structure_c.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Volumes/doc/projects/c/data_structure/build/CMakeFiles 8
-	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/data_structure_c.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Volumes/doc/projects/c/data_structure/build/CMakeFiles 0
-.PHONY : src/CMakeFiles/data_structure_c.dir/rule
-
-# Convenience name for target.
-data_structure_c: src/CMakeFiles/data_structure_c.dir/rule
-
-.PHONY : data_structure_c
-
-# clean rule for target.
-src/CMakeFiles/data_structure_c.dir/clean:
-	$(MAKE) -f src/CMakeFiles/data_structure_c.dir/build.make src/CMakeFiles/data_structure_c.dir/clean
-.PHONY : src/CMakeFiles/data_structure_c.dir/clean
-
-# clean rule for target.
-clean: src/CMakeFiles/data_structure_c.dir/clean
-
-.PHONY : clean
 
 #=============================================================================
 # Directory level rules for directory test

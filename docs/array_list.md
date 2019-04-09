@@ -121,6 +121,7 @@ void delete_many(unsigned int index, unsigned int offset, ArrayList *array)
 
     /* Move back the entries following the range to be removed */
     memmove(array->elements[index], array->elements[index + offset], (array->length - (index + offset)) * sizeof(Element));
+    array->length -= offset;
 }
  ```
 

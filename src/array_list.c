@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-02-28 14:21:46
- * @LastEditTime: 2019-04-09 11:41:54
+ * @LastEditTime: 2019-04-09 13:28:16
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -156,6 +156,7 @@ void delete_many(unsigned int index, unsigned int offset, ArrayList *array)
 
     /* Move back the entries following the range to be removed */
     memmove(array->elements[index], array->elements[index + offset], (array->length - (index + offset)) * sizeof(Element));
+    array->length -= offset;
 }
 
 /**

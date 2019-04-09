@@ -6,6 +6,8 @@
 + 非线程安全:非并发安全容器，即多线程条件下的读写并不安全
 + 可变:列表元素可以增加、删除以及修改
 
+由于使用索引访问数组时间复杂度是`O(1)`,故基本上所有的操作都会先去获取元素的索引下标。
+
 ## Access 
 顺序表对元素的访问主要有两种方式：按值和按照索引
 
@@ -135,6 +137,7 @@ void delete_many(unsigned int index, unsigned int offset, ArrayList *array)
 | `index_of_array` |  O(N)      | 查询元素     |     |
 | `delete_one`          | O(N) | 删除指定索引的元素     |     |
 | `push_index`          | O(N) |   向指定位置插入   |     |
+| `find`          | O(1) |   返回指定下标的元素   |     |
 | ...          | ...|   ...   |     |
 
 ### Concept 一些名词解释

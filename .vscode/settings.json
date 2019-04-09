@@ -16,6 +16,8 @@
         "sstream": "c",
         "streambuf": "c",
         "string": "c",
-        "assert.h": "c"
+        "assert.h": "c",
+        "iostream": "c",
+        "stdio.h": "c"
     }
 }

@@ -40,7 +40,7 @@ int index_of_array(Element e, ArrayList *array, compare_func cmp)
 
 ## Dynamic Capacity
 
-列表元素的增加和删除，都会更新列表的长度，当长度放大或者缩小到某个`阈值`时，列表的容积也会相应的放大和缩小，以便更加高效的利用内存空间。
+列表元素的增加，都会更新列表的长度，当长度放大到某个`阈值`时，列表的容积也会相应的放大，以便更加高效的利用内存空间。
 
 ### Scale factor
 扩容因子，即当容积不足时，容积拓展的速率。默认是`x1.5`
@@ -58,31 +58,83 @@ array->length +(array->length>>1)
 
 再插入第`11`个元素时，由于容积不足，故将其扩充到原来的`1.5`倍。
 
+```c
+
+void array_list_extend(ArrayList *array, unsigned int new_cap)
+{
+    if (new_cap <= array->capacity)
+    {
+        return;
+    }
+    Element *data;
+    data = realloc(array->elements, new_cap * sizeof(Element));
+    if (data == NULL)
+    {
+        return;
+    }
+    else
+    {
+        array->elements = data;
+        array->capacity = new_cap;
+    }
+}
+
+```
 
 
+### Add 
+元素在指定位置进行插入操作，插入时，该索引之后的数据要全部后移一位，同时注意这里可能存在扩容操作。适合倒序遍历，然后元素之间相互交换。
+```c
+
+/**
+ * insert the element in array;
+ * */
+void push_index(Element e, unsigned int index, ArrayList *array)
+{
+    if (array->length == array->capacity)
+    {
+        array_list_extend(array, array->length +(array->length>>1) );
+    }
+    /* Move back the entries following the range to be removed */
+    memmove(array->elements[index + 1], array->elements[index], (array->length - index) * sizeof(Element));
+    array->elements[index] = e;
+    ++array->length;
+}
+
+```
+
+注意，默认插入是在列表的结尾，这样可以提高效率。
+
+### Remove
+
+删分为两种操作，删除指定索引的元素以及删除指定值的元素。其实第二种，可以看作是先查出指定值的索引下标，在进行删除。
+
+删除操作的主要逻辑是，将指定索引下标之后的数据向前移位，并把最后一个元素置空。
+
+进一步抽象为删除连续下标的一些列值
+
+ ```c
+void delete_many(unsigned int index, unsigned int offset, ArrayList *array)
+{
+    if (index < 0 || (offset + index) > array->length)
+        return;
+
+    /* Move back the entries following the range to be removed */
+    memmove(array->elements[index], array->elements[index + offset], (array->length - (index + offset)) * sizeof(Element));
+}
+ ```
+
+**Ps:** 其实有时候为了提高内存使用效率，可以在删除之后增加一个缩放容积的操作。
+
+### Api
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+| Method         | 时间复杂度 | 说明 |     |
+| ------------ | ------ | ---- | --- |
+| `index_of_array` |  O(N)      | 查询元素     |     |
+| `delete_one`          | O(N) | 删除指定索引的元素     |     |
+| `push_index`          | O(N) |   向指定位置插入   |     |
+| ...          | ...|   ...   |     |
 
 ### Concept 一些名词解释
 

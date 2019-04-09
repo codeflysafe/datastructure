@@ -1,6 +1,11 @@
 # Array List Concept
 > 数组实现的顺序表，在内存中是顺序存储的，属于[顺序存储结构](#concept1)
 
+它有一些特点
++ 动态扩容:在达到最大容积之前，它会根据元素的数量来进行动态拓展或者收缩
++ 非线程安全:非并发安全容器，即多线程条件下的读写并不安全
++ 可变:列表元素可以增加、删除以及修改
+
 ## Access 
 顺序表对元素的访问主要有两种方式：按值和按照索引
 
@@ -32,6 +37,24 @@ int index_of_array(Element e, ArrayList *array, compare_func cmp)
 }
 
 ```
+
+## Dynamic Capacity
+列表元素的增加和删除，都会更新列表的长度，当长度放大或者缩小到某个阈值时，列表的容积也会相应的放大和缩小，以便更加高效的利用内存空间。
+
+### Scale factor
+扩容因子，即当容积不足时，容积拓展的速率。默认是`x1.5`
+
+```c
+array->length +(array->length>>1) 
+```
+当然，一般也不是无限拓展的，因为当一个表元素很多的时候，它的查找和插入、删除效率就会降低。因此一般会给一个最大扩充数量。比如 `1<<64` 最大整数值。
+
+### Scale Capacity
+
+
+
+
+
 
 
 
@@ -66,3 +89,4 @@ Loc(a_i) = Loc(a_0)+(i-1)*l
 ### 参考
 
 1. [array_list wiki](https://en.wikipedia.org/wiki/Dynamic_array)
+2. [Java ArrayList](https://octoperf.com/blog/2018/03/19/java-arraylist/)

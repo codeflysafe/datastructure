@@ -1,0 +1,11 @@
+
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: Project
+Description: C data structures collection
+Version: 3.13.4
+Libs: -L${libdir} -lcollectc
+Cflags: -I${includedir}

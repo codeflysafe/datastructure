@@ -142,8 +142,8 @@ void delete_many(unsigned int index, unsigned int offset, ArrayList *array)
 
 ## Algorithm
 
-1. [q_sort](./q_sort.md#array_q_sort)
-2. [reverse](./reverse.md#array_reverse)
+1. [q_sort](./q_sort.md#array)
+2. [reverse](./reverse.md#array)
 3. ...
 
 ## Concept 一些名词解释

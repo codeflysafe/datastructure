@@ -92,8 +92,8 @@ Element find(unsigned int index, LinkedList *list)
 
 ## Algorithm
 
-1. [q_sort](./q_sort.md#linked_list_q_sort)
-2. [reverse](./reverse.md#linked_list_reverse)
+1. [q_sort](./q_sort.md#linked)
+2. [reverse](./reverse.md#linked)
 3. ...
 
 

@@ -1,7 +1,7 @@
 # QuickSort
 
 
-## <span id="array_q_sort">Array</span>
+## Array
 
 
-## <span id="linked_q_sort">Linked</span>
+## Linked

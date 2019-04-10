@@ -140,6 +140,9 @@ void delete_many(unsigned int index, unsigned int offset, ArrayList *array)
 | `find`          | O(1) |   返回指定下标的元素   |     |
 | ...          | ...|   ...   |     |
 
+## Implements
+[](../src/array_list.c)
+
 ## Algorithm
 
 1. [q_sort](./q_sort.md#array)

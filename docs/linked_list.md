@@ -81,7 +81,8 @@ Element find(unsigned int index, LinkedList *list)
 + [CircleLinkedList](./circle_linked_list)
 + ...
 
-
+## Implements
+[](../src/linked_list.c)
 
 ## Applications
 

@@ -9,7 +9,7 @@
 
 ### list 
 - [x] [array_list](./docs/array_list.md)
-- [ ] [linked_list](./docs/linked_list.md)
+- [x] [linked_list](./docs/linked_list.md)
 - [ ] [queue](./docs/queue.md)
 - [ ] [stack](./docs/stack.md)
 - [ ] [skip_list](./docs/skip_list.md)

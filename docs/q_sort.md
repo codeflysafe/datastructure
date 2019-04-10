@@ -30,7 +30,17 @@
 ![](https://raw.githubusercontent.com/hsjfans/git_resource/master/20190410172956.png)
 
 
-当然实现的时候可以在进行优化，使用双指针来减少交换次数,
+当然实现的时候可以在进行优化，使用双指针来减少交换次数,如下,
+
+![](https://raw.githubusercontent.com/hsjfans/git_resource/master/20190410180714.png)
+
+
+
+
+## Time complexity
+
+
+## Array
 
 ```c
 void q_sort(ArrayList *array, unsigned int left, unsigned int right, compare_func cmp)
@@ -63,12 +73,6 @@ void sort(ArrayList *array, compare_func cmp)
 }
 
 ```
-
-
-## Time complexity
-
-
-## Array
 
 
 ## Linked

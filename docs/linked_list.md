@@ -82,7 +82,7 @@ Element find(unsigned int index, LinkedList *list)
 + ...
 
 ## Implements
-[](../src/linked_list.c)
+[linked_list](../src/linked_list.c)
 
 ## Applications
 

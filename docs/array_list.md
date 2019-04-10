@@ -141,7 +141,7 @@ void delete_many(unsigned int index, unsigned int offset, ArrayList *array)
 | ...          | ...|   ...   |     |
 
 ## Implements
-[](../src/array_list.c)
+[array_list](../src/array_list.c)
 
 ## Algorithm
 

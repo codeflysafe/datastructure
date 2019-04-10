@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-02-28 14:21:09
- * @LastEditTime: 2019-04-09 14:23:56
+ * @LastEditTime: 2019-04-10 21:49:53
  */
 
 #ifndef DATA_STRUCTURE_LINKEDLIST_H
@@ -71,18 +71,18 @@ void clear(LinkedList *list);
 // reverse the array
 void reverse(LinkedList *list);
 
-/**
- * @description: 
- * @param {type} 
- * @return: 
- */
-void q_sort(LinkedList *list, unsigned int left, unsigned int right, boolean desc, compare_func cmp);
+// /**
+//  * @description:
+//  * @param {type}
+//  * @return:
+//  */
+// void q_sort(LinkedList *list, unsigned int left, unsigned int right, boolean desc, compare_func cmp);
 
-/**
- * @description: sort the array; desc or asc
- * @param {type} 
- * @return: 
- */
-void sort(LinkedList *list, boolean desc, compare_func cmp);
+// /**
+//  * @description: sort the array; desc or asc
+//  * @param {type}
+//  * @return:
+//  */
+// void sort(LinkedList *list, boolean desc, compare_func cmp);
 
 #endif //DATA_STRUCTURE_LINKEDLIST_H

@@ -90,6 +90,11 @@ Element find(unsigned int index, LinkedList *list)
    - [Stack](./stack.md)
 
 
+## Algorithm
+
+1. [q_sort](./q_sort.md#linked_list_q_sort)
+2. [reverse](./reverse.md#linked_list_reverse)
+3. ...
 
 
 

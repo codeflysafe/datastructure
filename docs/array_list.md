@@ -129,7 +129,7 @@ void delete_many(unsigned int index, unsigned int offset, ArrayList *array)
 
 **Ps:** 其实有时候为了提高内存使用效率，可以在删除之后增加一个缩放容积的操作。
 
-### Api
+## Api
 
 
 | Method         | 时间复杂度 | 说明 |     |
@@ -140,7 +140,13 @@ void delete_many(unsigned int index, unsigned int offset, ArrayList *array)
 | `find`          | O(1) |   返回指定下标的元素   |     |
 | ...          | ...|   ...   |     |
 
-### Concept 一些名词解释
+## Algorithm
+
+1. [q_sort](./q_sort.md#array_q_sort)
+2. [reverse](./reverse.md#array_reverse)
+3. ...
+
+## Concept 一些名词解释
 
 #### <span id="concept1">1. 顺序存储结构</span>
 > 顺序映像，是指借助元素在存储器相对位置来表示各数据元素之间的逻辑关系。
@@ -153,7 +159,6 @@ void delete_many(unsigned int index, unsigned int offset, ArrayList *array)
 
 ```
 Loc(a_i) = Loc(a_0)+(i-1)*l
-
 ```
 ### 参考
 

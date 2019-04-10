@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-02-28 14:20:59
- * @LastEditTime: 2019-03-01 17:46:54
+ * @LastEditTime: 2019-04-10 11:11:46
  */
 
 #ifndef DATA_STRUCTURE_ARRAYLIST_H
@@ -110,13 +110,13 @@ void reverse(ArrayList *array);
  * @param {type} 
  * @return: 
  */
-void q_sort(ArrayList *array, unsigned int left, unsigned int right, boolean desc, compare_func cmp);
+void q_sort(ArrayList *array, unsigned int left, unsigned int right,  compare_func cmp);
 
 /**
  * @description: sort the array; desc or asc
  * @param {type} 
  * @return: 
  */
-void sort(ArrayList *array, boolean desc, compare_func cmp);
+void sort(ArrayList *array,  compare_func cmp);
 
 #endif //DATA_STRUCTURE_ARRAYLIST_H

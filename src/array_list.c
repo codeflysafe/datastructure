@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-02-28 14:21:46
- * @LastEditTime: 2019-04-09 13:28:16
+ * @LastEditTime: 2019-04-10 11:12:34
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -49,7 +49,6 @@ ArrayList *array_list_new(unsigned int cap)
     }
     return temp;
 }
-
 
 unsigned int len(ArrayList *array)
 {
@@ -184,7 +183,7 @@ void push_index(Element e, unsigned int index, ArrayList *array)
 {
     if (array->length == array->capacity)
     {
-        array_list_extend(array, array->length +(array->length>>1) );
+        array_list_extend(array, array->length + (array->length >> 1));
     }
     /* Move back the entries following the range to be removed */
     memmove(array->elements[index + 1], array->elements[index], (array->length - index) * sizeof(Element));
@@ -244,7 +243,7 @@ void reverse(ArrayList *array)
  * @param {type} 
  * @return: 
  */
-void q_sort(ArrayList *array, unsigned int left, unsigned int right, boolean desc, compare_func cmp)
+void q_sort(ArrayList *array, unsigned int left, unsigned int right, compare_func cmp)
 {
     if (left >= right)
         return;
@@ -255,7 +254,7 @@ void q_sort(ArrayList *array, unsigned int left, unsigned int right, boolean des
     Swap(array->elements[right], array->elements[mid]);
     for (unsigned int i = left; i < right; i++)
     {
-        if ((desc == 0 && (cmp(array->elements[i], array->elements[right]) < 0)) || ((desc == 1) && (cmp(array->elements[i], array->elements[right]) > 0)))
+        if (cmp(array->elements[i], array->elements[right]) < 0)
         {
             Swap(array->elements[startIndex++], array->elements[i]);
         }
@@ -263,13 +262,11 @@ void q_sort(ArrayList *array, unsigned int left, unsigned int right, boolean des
 
     // swap the
     Swap(array->elements[right], array->elements[startIndex]);
-    q_sort(array, left, startIndex - 1, desc, cmp);
-    q_sort(array, startIndex + 1, right, desc, cmp);
+    q_sort(array, left, startIndex - 1, cmp);
+    q_sort(array, startIndex + 1, right, cmp);
 }
 
-
-void sort(ArrayList *array, boolean desc, compare_func cmp)
+void sort(ArrayList *array, compare_func cmp)
 {
-    q_sort(array, 0, array->length - 1, desc, cmp);
+    q_sort(array, 0, array->length - 1, cmp);
 }
-

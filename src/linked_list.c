@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-02-28 14:22:00
- * @LastEditTime: 2019-04-09 16:31:57
+ * @LastEditTime: 2019-04-10 11:14:39
  */
 
 #include "include/linked_list.h"
@@ -203,4 +203,14 @@ void reverse(LinkedList *list)
         first = node;
         node = tmp;
     }
+}
+
+void q_sort(LinkedList *list, unsigned int left, unsigned int right, boolean desc, compare_func cmp)
+{
+   
+}
+
+void sort(LinkedList *list, boolean desc, compare_func cmp)
+{
+   
 }

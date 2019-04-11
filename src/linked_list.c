@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-02-28 14:22:00
- * @LastEditTime: 2019-04-10 20:56:34
+ * @LastEditTime: 2019-04-11 15:03:54
  */
 
 #include "include/linked_list.h"
@@ -196,7 +196,7 @@ void reverse(LinkedList *list)
     LinkedNode *node = first->next;
     while (node)
     {
-        LinkedList *tmp = node->next;
+        LinkedNode *tmp = node->next;
         node->next = first;
         first->next = tmp;
         root->next = node;

@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-04-10 19:21:31
- * @LastEditTime: 2019-04-10 22:03:39
+ * @LastEditTime: 2019-04-11 11:12:24
  */
 
 #include "include/double_linked_list.h"
@@ -233,5 +233,19 @@ void clear(DoubleLinkedList *list)
 // reverse the array
 void reverse(DoubleLinkedList *list)
 {
-    // todo
+    DoubleLinkedNode *head = list->head;
+    DoubleLinkedNode *tail = list->tail;
+
+    unsigned int left, right;
+    left = 0;
+    right = len(list);
+
+    while (left < right)
+    {
+        Element tmp = head->element;
+        head->element = tail->element;
+        tail->element = tmp;
+        left++;
+        right--;
+    }
 }

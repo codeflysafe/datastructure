@@ -90,6 +90,7 @@ Element find(unsigned int index, LinkedList *list)
 由于它高效删除和插入的特点，且无需提前分配空间等优点，因此它是实现一些其它线性结构的基础。一些常见应用:
 - [Queue](./queue.md)
 - [Stack](./stack.md)
+- [CircularLinkedList](./circular_linked_list.md)
 
 
 ## Algorithm

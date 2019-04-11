@@ -1,4 +1,5 @@
 # data_structure 
+> [English](./readme_en.md) [简体中文](./readme.md)
 
 本仓库包含了基础的数据结构以及算法，每一种数据结构以及算法都有自己对应的`md`文档，以及参考链接
 
@@ -10,7 +11,7 @@
 ### list 
 - [x] [array_list](./docs/array_list.md)
 - [x] [linked_list](./docs/linked_list.md)
-- [ ] [double_linked_list](./docs/double_linked_list.md)
+- [x] [double_linked_list](./docs/double_linked_list.md)
 - [ ] [queue](./docs/queue.md)
 - [ ] [stack](./docs/stack.md)
 - [ ] [skip_list](./docs/skip_list.md)

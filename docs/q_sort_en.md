@@ -15,7 +15,8 @@ There are **two core steps** after observation:
 2. Partition unsorted array.
 
 ## How to select an pivot from unsorted array ?
-
+It's very import to choose an suitable pivot for q_sort. The worst case 
+will appear when choosing the min pivot from array.
 
 
 

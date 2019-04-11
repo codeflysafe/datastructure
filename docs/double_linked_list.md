@@ -60,5 +60,37 @@ DoubleLinkedNode *find_node(unsigned int index, DoubleLinkedList *list)
 ```
 
 ### Add Element
-元素的插入与单链表相比，只是多了一些指针的操作。由于双链表，
+元素的插入与单链表相比，只是多了一些指针的操作。它的插入过程如下:
+1. 找到待插入的位置的节点，记作:`A`
+2. 将节点`A`的前置节点`C`指向 新插入的节点`B`
+3. 将节点`A`的前置节点重置为`B`。
+4. 然后，将 B的前置节点置作`C`，后继节点置作`A`。
+
+![](https://raw.githubusercontent.com/hsjfans/git_resource/master/20190411142630.png)
+
+![](https://raw.githubusercontent.com/hsjfans/git_resource/master/20190411142949.png)
+
+### Remove Element
+
+与单链表的删除类似，只是其节点的指针变更有所不同。其步骤如下:
+
+1. 获取目的节点`A`。
+2. 将`A` 的前置节点`B` 的`next`指针重置为`A`的后继节点`C`。
+3. 将`C` 的`prev`指针指向节点`B`。
+4. 回收节点`A`(`free(A)`)。
+
+$$B\iff A \iff C$$
+
+$$B \iff C $$
+
+## Implements
+[double_linked_list](../src/double_linked_list.c)
+
+## Applications
+
+由于它高效删除和插入的特点，且无需提前分配空间等优点，因此它是实现一些其它线性结构的基础。一些常见应用:
+- [Queue](./queue.md)
+- [Stack](./stack.md)
+
+
 

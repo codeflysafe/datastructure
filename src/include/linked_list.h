@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-02-28 14:21:09
- * @LastEditTime: 2019-04-10 21:49:53
+ * @LastEditTime: 2019-04-11 14:52:49
  */
 
 #ifndef DATA_STRUCTURE_LINKEDLIST_H
@@ -31,7 +31,7 @@ LinkedNode *linked_node_new(Element e, LinkedNode *next);
 typedef struct linked_list
 {
     LinkedNode *root; // root node
-    int length;       // the size of linked list
+    int length; // the size of linked list
 
 } LinkedList;
 

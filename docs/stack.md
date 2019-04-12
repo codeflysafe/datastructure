@@ -7,4 +7,103 @@
 
 ![](https://raw.githubusercontent.com/hsjfans/git_resource/master/20190411181235.png)
 
+由于堆栈的操作是线性表的子集，可以采用链表或者数组等线性结构来模拟堆栈。
+
+这里只是用链表来表示栈。顺序表的实现，只需要维护两个指针，栈顶(`top`)和栈底(`bottom`)，是线性表的操作子集，这里不再描述。
+
+## Push
+向堆栈内压入数据，新数据位于栈顶位置。
+
+```c
+void push(Element e, Stack *stack)
+{
+    StackNode *node = stack_node_new(e, stack->head);
+    stack->head = node;
+    stack->length++;
+}
+
+```
+
+
+## Pop
+删除栈顶的元素并返回该元素。
+
+```c
+Element pop(Stack *stack)
+{
+    if (is_empty(stack))
+    {
+        return NULL;
+    }
+    StackNode *node = stack->head;
+    stack->head = node->next;
+    stack->length--;
+    Element e = node->e;
+    free_node(node);
+    return e;
+}
+
+
+```
+此操作涉及节点回收
+```c
+void free_node(StackNode *node)
+{
+    if (node)
+    {
+        node->e = NULL;
+        node->next = NULL;
+        free(node);
+    }
+}
+```
+
+
+## Applications
+由于堆栈后进先出的特性，因此有很多经典的应用场景。
+
+### 数值转换
+[leetcode](https://leetcode-cn.com/problems/convert-a-number-to-hexadecimal/)
+十进制与其它进制的转换。
+其计算过程如下
+
+```
+N = (N div d)x d + N mod d
+```
+以 1024 由`10进制`转`8进制`为例。
+
+| value | div | mod |
+| ----- | --- | --- |
+| 1024  | 128 | 0   |
+| 128   | 16  | 0   |
+| 16    | 2   | 0   |
+| 2     | 0   | 2   |
+
+因此获取`8进制`表示为 `0x2000`
+
+观察其计算过程，需要将其计算的最终结构反转。因此，使用堆栈来存储结构，然后在弹出即可。
+
+
+```c
+
+void conversion(int N, int d)
+{
+    Stack *stack = stack_new();
+    while (N)
+    {
+        int temp = N % d;
+        push(&temp, stack);
+        N = N / d;
+    }
+    while (!is_empty(stack))
+    {
+        Element e = pop(stack);
+        printf("%d", *(int *)e);
+    }
+}
+```
+### 括号匹配的检验
+[leetcode](https://leetcode-cn.com/explore/learn/card/queue-stack/218/stack-last-in-first-out-data-structure/878/)
+
+
 

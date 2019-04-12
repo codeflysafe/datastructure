@@ -1,5 +1,4 @@
 {
-    "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools",
     "files.associations": {
         "array_list.h": "c",
         "linked_list.h": "c",

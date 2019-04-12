@@ -135,4 +135,10 @@ bool isValid(string s) {
 
 ```
 
+### 迷宫求解
 
+迷宫问题，即从入口到出口是一个经典的程序设计问题。当采取`穷举法`去求解时，需要采用沿着某一个方向向前探索，若能走通，则继续前进，否则回退到上个节点。因此，需要有一个数据结构来存储这种行走的路径，此时栈是一个很好的选择。
+
+![](https://raw.githubusercontent.com/hsjfans/git_resource/master/20190412174818.png)
+
+详细请见 [迷宫问题](./maze_problem.md)

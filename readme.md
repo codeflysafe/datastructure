@@ -1,6 +1,10 @@
 # data_structure 
 > [English](./readme_en.md) [简体中文](./readme.md)
 
+## `leetcode` 相关
+> 在部分文档中，会涉及到 `leetcode` 的一些题目，它的一些实现请看 
+> [leetcode](https://github.com/hsjfans/leetcode)
+
 本仓库包含了基础的数据结构以及算法，每一种数据结构以及算法都有自己对应的`md`文档，以及参考链接
 
 注意: 此项目代码**未在生产环境使用过**，仅用于学习和交流。

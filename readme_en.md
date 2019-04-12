@@ -13,5 +13,5 @@ Unfortunately, I have an **poor English**, so **forgive me**.
 I will fix those articles irregularly until they are acceptable .
 
 ## Leetcode related
-Some sections may be contact with `leetcode` problems, the implements of them are replaced in [here](https://github.com/hsjfans/leetcode)
+Some sections may be contact with `leetcode` problems, the implements can be found in [here](https://github.com/hsjfans/leetcode)
 

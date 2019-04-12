@@ -104,6 +104,35 @@ void conversion(int N, int d)
 ```
 ### 括号匹配的检验
 [leetcode](https://leetcode-cn.com/explore/learn/card/queue-stack/218/stack-last-in-first-out-data-structure/878/)
+检测括号的合法性，所谓合法即:括号在正确的位置上成对出现。例如:
 
++ `(((())))` ==> 合法的
++ `()(()))(` ==> 不合法
+
+```c++
+bool isValid(string s) {
+//        map<char,char> brackets= {
+//                {'}','{'},
+//                {']','['},
+//                {')','['},
+//        };
+        stack<char> stack1 ;
+        for(int i=0;i<s.size();i++){
+            char temp = s[i];
+            if (temp=='{' || temp=='[' || temp=='('){
+                stack1.push(temp);
+            }else {
+                if (stack1.empty()) return false;
+                if (temp == '}' && stack1.top() != '{') return false;
+                if (temp == ')' && stack1.top() != '(') return false;
+                if (temp == ']' && stack1.top() != '[') return false;
+                stack1.pop();
+            }
+        }
+        return  stack1.empty();
+
+    }
+
+```
 
 

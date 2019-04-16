@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-04-12 11:14:29
- * @LastEditTime: 2019-04-12 11:27:08
+ * @LastEditTime: 2019-04-15 11:57:20
  */
 
 #include "include/stack.h"
@@ -25,3 +25,4 @@ void conversion(int N, int d)
         printf("%d", *(int *)e);
     }
 }
+

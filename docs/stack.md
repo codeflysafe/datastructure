@@ -160,3 +160,48 @@ bool isValid(string s) {
 这里采用两个栈来存储，一个存储运算符`OPTR`，另外一个存储待运算的数值记作`OPND`。 
 
 
+[leetcode-150](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
+
+这是一个采用堆栈进行计算的好例子，将上一步的运算结果`push`到堆栈中，当遇到一个运算符时，`pop` 出两个元素。
+
+```c++
+ int evalRPN(vector<string> &tokens)
+    {
+        stack<int> elements;
+        for (string token : tokens)
+        {
+            if (token == "+" || token == "-" || token == "/" || token == "*")
+            {
+                int c;
+                int b = elements.top();
+                elements.pop();
+                int a = elements.top();
+                elements.pop();
+                if (token == "+")
+                    c = a + b;
+                else if (token == "-")
+                    c = a - b;
+                else if (token == "/")
+                    c = a / b;
+                else
+                    c = a * b;
+                elements.push(c);
+            }
+            else
+            {
+                elements.push(stoi(token));
+            }
+        }
+        return elements.top();
+    }
+
+```
+
+
+
+### More Related Problems
+
+1. [leetcode-basic_calculator](https://leetcode.com/problems/basic-calculator/)
+2. [leetcode-evaluate_division](https://leetcode.com/problems/evaluate-division/)
+
+

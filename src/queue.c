@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-04-11 14:47:41
- * @LastEditTime: 2019-04-17 09:48:15
+ * @LastEditTime: 2019-04-17 10:32:18
  */
 
 #include "include/queue.h"
@@ -26,8 +26,7 @@ LinkedQueue *linked_queue_new()
     LinkedQueue *queue = (LinkedQueue *)malloc(sizeof(LinkedQueue));
     if (queue)
     {
-        queue->front = NULL;
-        queue->rear = NULL;
+        queue->front = queue->rear = q_node_new(NULL, NULL);
         queue->size = 0;
     }
     return queue;

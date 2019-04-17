@@ -16,8 +16,8 @@
 - [x] [array_list](./docs/array_list.md)
 - [x] [linked_list](./docs/linked_list.md)
 - [x] [double_linked_list](./docs/double_linked_list.md)
-- [ ] [queue](./docs/queue.md)
-- [ ] [stack](./docs/stack.md)
+- [x] [queue](./docs/queue.md)
+- [x] [stack](./docs/stack.md)
 - [ ] [skip_list](./docs/skip_list.md)
 - [ ] and other ...
 

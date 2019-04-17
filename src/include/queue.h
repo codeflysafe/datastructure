@@ -3,24 +3,66 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-04-11 14:47:41
- * @LastEditTime: 2019-04-11 14:56:26
+ * @LastEditTime: 2019-04-17 09:37:41
  */
 
 #ifndef QUEUE
 #define QUEUE
-#include "double_linked_list.h"
+#include "common.h"
 
-typedef struct queue
+// define the linked queue
+typedef struct q_node
 {
-    DoubleLinkedList *data;
-} Queue;
+    Element data;
+    struct q_node *next;
 
-Queue *queue_new();
+} QNode;
 
-void en_queue(Element e, Queue *queue);
+QNode *q_node_new(Element data, QNode *next);
 
-boolean is_empty(Queue *queue);
+typedef struct linked_queue
+{
+    int size;
+    QNode *front; // the pointer to queue's front
+    QNode *rear;  //  the pointer to queue's rear
+} LinkedQueue;
 
-Element de_queue(Queue *queue);
+LinkedQueue *linked_queue_new();
+
+void en_queue(Element e, LinkedQueue *queue);
+
+boolean is_empty(LinkedQueue *queue);
+
+Element de_queue(LinkedQueue *queue);
+
+void clear_queue(LinkedQueue *queue);
+
+void destory_queue(LinkedQueue *queue);
+
+// the circle queue
+
+typedef struct circle_queue
+{
+    Element *elements;
+    int capacity;
+    int front; // the  pointer of front
+    int rear;  // the
+} CircleQueue;
+
+CircleQueue *circle_queue_new(int capacity);
+
+void en_circle_queue(Element e, CircleQueue *queue);
+
+// return current elements's size of queue
+int len(CircleQueue *queue);
+
+boolean is_full(CircleQueue *queue);
+
+Element
+de_circle_queue(CircleQueue *queue);
+
+void clear_circle_queue(CircleQueue *queue);
+
+void destory_circle_queue(CircleQueue *queue);
 
 #endif

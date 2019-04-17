@@ -3,14 +3,14 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-02-28 14:40:32
- * @LastEditTime: 2019-04-09 11:42:20
+ * @LastEditTime: 2019-04-16 11:47:19
  */
 #ifndef DATA_STRUCTURE_COMMON_H
 #define DATA_STRUCTURE_COMMON_H
 
 // array and linked list init config
 #define LIST_INIT_CAPACITY 10 // 默认初始容器是 10
-
+#define MAX_QUEUE_SIZE 100    // 最大队列大小
 
 // define the boolean
 typedef unsigned int boolean;

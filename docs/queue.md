@@ -101,3 +101,9 @@ int len(CircleQueue *queue)
 ## Implements
 
 [queue](../src/queue.c)
+
+
+## Related Applications
+
+[leetcode_task_schedular](https://leetcode.com/problems/task-scheduler/)
+

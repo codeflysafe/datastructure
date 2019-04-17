@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-04-11 14:47:41
- * @LastEditTime: 2019-04-17 10:32:18
+ * @LastEditTime: 2019-04-17 10:39:54
  */
 
 #include "include/queue.h"
@@ -37,7 +37,7 @@ void en_queue(Element e, LinkedQueue *queue)
     QNode *node = q_node_new(e, NULL);
     if (queue->size == 0)
     {
-        queue->front = node;
+        queue->front->next = node;
         queue->rear = node;
     }
     else
@@ -52,11 +52,11 @@ Element de_queue(LinkedQueue *queue)
 {
     if (queue->size == 0)
         return NULL;
-    QNode *node = queue->front;
+    QNode *node = queue->front->next;
     queue->front = node->next;
     Element e = node->data;
-    node->data = NULL;
-    node->next = NULL;
+    if ((queue->rear) == node)
+        queue->rear = queue->front;
     free(node);
     queue->size--;
     return e;

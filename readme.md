@@ -21,6 +21,9 @@
 - [ ] [skip_list](./docs/skip_list.md)
 - [ ] and other ...
 
+### string
+- [ ] [string](./docs/string.md)
+
 ### tree
 - [ ] [binary_tree](./docs/binary_tree.md)
 - [ ] [avl_tree](./docs/avl_tree.md)
@@ -50,6 +53,13 @@
 - [ ] [bubble_sort](./docs/bubble_sort.md)
 
 
-## Others
+## Testing
 
-- [ ] 单元测试
+- [ ] [array_list](./test/array_list_test.c) 
+- [ ] [linked_list](./test/linked_list_test.c)
+- [ ] [double_linked_list](./test/double_linked_list.c)
+- [ ] [queue](./test/queue.c)
+- [ ] [stack](./test/stack.c)
+- [ ] [skip_list](./test/skip_list.c)
+- [ ] and other ...
+

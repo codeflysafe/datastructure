@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-04-18 12:32:58
- * @LastEditTime: 2019-04-18 18:50:02
+ * @LastEditTime: 2019-04-18 18:54:01
  */
 #include <stdlib.h>
 #include "include/skip_list.h"
@@ -147,6 +147,7 @@ void skip_list_delete(SkipList *list, Element e, compare_func cmp)
     if (x && cmp(x->backward, e) == 0)
     {
         skip_list_delete_node(list, x, update);
+        free(x);
     }
 }
 

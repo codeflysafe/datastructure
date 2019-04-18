@@ -204,6 +204,59 @@ void skip_list_insert(SkipList *list, Element e, compare_func cmp)
 
 ### delete element
 
+delete 是相对较为简单的，只需要注意删除完节点之后，要查看高层次是否为空，及时删除。
+
+```c
+void skip_list_delete(SkipList *list, Element e, compare_func cmp)
+{
+    SkipListNode *update[MAX_SKIP_LIST_LEVEL], *x;
+    x = list->header;
+    int i, level;
+    for (i = list->level; i >= 0; i--)
+    {
+        while (x->level[i].forward && cmp(x->level[i].forward->e, e) < 0)
+        {
+            x = x->level[i].forward;
+        }
+        update[i] = x;
+    }
+
+    x = x->level[0].forward;
+    if (x && cmp(x->backward, e) == 0)
+    {
+        skip_list_delete_node(list, x, update);
+        free(x);
+    }
+}
+
+void skip_list_delete_node(SkipList *list, SkipListNode *node, SkipListNode **update)
+{
+    int i;
+    for (i = 0; i < list->level; i++)
+    {
+        if (update[i]->level[i].forward == node)
+        {
+            update[i]->level[i].forward = node->level[i].forward;
+        }
+    }
+    if (node->level[0].forward)
+    {
+        node->level[0].forward->backward = node->backward;
+    }
+    else
+    {
+        list->tail = node->backward;
+    }
+    while (list->level > 0 && list->header->level[list->level].forward == NULL)
+    {
+        list->level--;
+    }
+    list->size--;
+}
+
+
+```
+
 
 ## Related
 

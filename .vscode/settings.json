@@ -19,6 +19,7 @@
         "iostream": "c",
         "stdio.h": "c",
         "double_linked_list.h": "c",
-        "queue.h": "c"
+        "queue.h": "c",
+        "limits.h": "c"
     }
 }

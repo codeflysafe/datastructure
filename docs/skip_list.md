@@ -25,6 +25,47 @@
 
 ```
 T=logN*(n^(1/logN)) =  logN*(2^(1/logN*logN)) = logN
+
+```
+
+#### 最大层数 MaxLevel
+由上面可以看到,当`MaxLevel=16`时,可以容纳的数据为 2^16 次方
+
+因此，**跳表的关键在于元素变更后，如何维护高效的存储结构**。
+
+
+### 数学证明
+严格数学推导见[skip_list_math](./skip_list_math.md)
+
+### 存储结构
+这里参考 `redis` 的源码来定义跳表的数据结构。
+```c
+
+// 单个节点
+typedef struct skip_list_node
+{
+    // the value
+    Element e;
+    // the backward in the same level
+    struct skip_list_node *backward;
+    struct skip_list_level
+    {
+        // the next node in the same level
+        struct skip_list_node *forward;
+    } level[];
+
+} SkipListNode;
+
+// 跳表 这里存储 header 和 tail 是为了方便前后遍历
+typedef struct skip_list
+{
+    SkipListNode *header, *tail;
+    // the size stored in this list
+    unsigned int size;
+    // the current maxt level
+    int level;
+} SkipList;
+
 ```
 
 
@@ -42,10 +83,46 @@ T=logN*(n^(1/logN)) =  logN*(2^(1/logN*logN)) = logN
 
 代码实现如下:
 ```c
-
+SkipListNode *skip_list_search(SkipList *list, Element e, compare_func cmp)
+{
+    if (list->size == 0)
+        return NULL;
+    int level = list->level;
+    SkipListNode *head = list->header;
+    while (head && level >= 0)
+    {
+        SkipListNode *temp = head->level[level].forward;
+        if (temp == NULL)
+        {
+            level--;
+        }
+        else
+        {
+            int p = cmp(temp->e, e);
+            if (p == 0)
+            {
+                return temp;
+            }
+            else if (p < 0)
+            {
+                head = temp;
+            }
+            else
+            {
+                level--;
+            }
+        }
+    }
+    return NULL;
+}
 ```
 
 
+## insert element
+
+![wiki](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Skip_list_add_element-en.gif/400px-Skip_list_add_element-en.gif)
+
+### Randomized algorithm 
 
 
 
@@ -62,3 +139,6 @@ T=logN*(n^(1/logN)) =  logN*(2^(1/logN*logN)) = logN
 
 1. [skip list wiki](https://en.wikipedia.org/wiki/Skip_list)
 2. [mit skip list](https://www.youtube.com/watch?v=2g9OSRKJuzM&list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&index=11)
+3. [redis skip list](https://github.com/antirez/redis/blob/6de5d25062ef884beb6f9425b86dbc2b81e733fe/src/server.h)
+4. [reids 设计及实现](https://redisbook.readthedocs.io/en/latest/internal-datastruct/skiplist.html)
+5. [ Skip Lists: A Probabilistic Alternative to Balanced Trees ](https://klevas.mif.vu.lt/~ragaisis/ADS2006/skiplists.pdf)

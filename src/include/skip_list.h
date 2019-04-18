@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-04-17 16:29:33
- * @LastEditTime: 2019-04-18 14:31:57
+ * @LastEditTime: 2019-04-18 18:43:34
  */
 #ifndef SKIP_LIST
 #define SKIP_LIST
@@ -44,6 +44,8 @@ Element *skip_list_find(SkipList *list, Element e, compare_func cmp);
 void skip_list_insert(SkipList *list, Element e, compare_func cmp);
 
 void skip_list_delete(SkipList *list, Element e, compare_func cmp);
+
+void skip_list_delete_node(SkipList *list, SkipListNode *node, SkipListNode **update);
 
 int random_level();
 

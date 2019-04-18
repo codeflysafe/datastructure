@@ -123,9 +123,86 @@ SkipListNode *skip_list_search(SkipList *list, Element e, compare_func cmp)
 ![wiki](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Skip_list_add_element-en.gif/400px-Skip_list_add_element-en.gif)
 
 ### Randomized algorithm 
+根据上面的数学证明，我们知道了每次插入节点的`level`是随机的，因此采取随机数生成.
+
+```c
+int random_level()
+{
+    int level = 0;
+    while ((random() & 0xFFFF) < (SKIP_LIST_P * 0xFFFF))
+    {
+        level++;
+    }
+    return level < MAX_SKIP_LIST_LEVEL ? level : MAX_SKIP_LIST_LEVEL;
+}
+
+```
 
 
+### insert
 
+```c
+void skip_list_insert(SkipList *list, Element e, compare_func cmp)
+{
+    SkipListNode *update[MAX_SKIP_LIST_LEVEL], *x;
+    SkipListNode *head = list->header;
+    int i, level;
+    for (i = list->level; i >= 0; i--)
+    {
+        SkipListNode *temp = head->level[i].forward;
+        if (temp)
+        {
+            int p = cmp(temp->e, e);
+            // has exists return
+            if (p == 0)
+                return;
+            // if the value less target;node forward
+            // meantime,the left node update
+            else if (p < 0)
+            {
+                head = temp;
+            }
+            // if the value greater target; update the right node
+            //  else  continue;
+        }
+        update[i] = head;
+    }
+
+    // start modify the list
+    // meantime update the 
+    level = random_level();
+    if (level > list->level)
+    {
+        for (i = list->level; i < level; i++)
+        {
+            update[i] = list->header;
+        }
+        list->level = level;
+    }
+
+    x = skip_list_node_new(e, level);
+    for (i = 0; i < level; i++)
+    {
+        x->level[i].forward = update[i]->level[i].forward;
+        update[i]->level[i].forward = x;
+    }
+
+    x->backward = (update[0] == list->header) ? NULL : update[0];
+    if (x->level[0].forward)
+    {
+        x->level[0].forward->backward = x;
+    }
+    else
+    {
+        list->tail = x;
+    }
+    list->size++;
+    return;
+}
+
+```
+
+### delete element
 
 
 ## Related

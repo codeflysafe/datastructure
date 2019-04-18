@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-02-28 14:40:32
- * @LastEditTime: 2019-04-18 13:54:29
+ * @LastEditTime: 2019-04-18 17:43:26
  */
 #ifndef DATA_STRUCTURE_COMMON_H
 #define DATA_STRUCTURE_COMMON_H
@@ -14,6 +14,7 @@
 #define INT_MAX 2147483647        /* max value for an int */
 #define INT_MIN (-2147483647 - 1) /* min value for an int */
 #define MAX_SKIP_LIST_LEVEL 64
+#define SKIP_LIST_P 0.24 // p=1/4
 
 // define the boolean
 typedef unsigned int boolean;

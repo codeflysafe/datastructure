@@ -257,6 +257,9 @@ void skip_list_delete_node(SkipList *list, SkipListNode *node, SkipListNode **up
 
 ```
 
+## Implements
+[skip_list](../src/skip_list.c)
+
 
 ## Related
 

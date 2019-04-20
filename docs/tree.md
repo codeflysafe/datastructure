@@ -80,7 +80,8 @@ typedef struct tree
 `k->b->d->a->e->c->g->h`
 
 其过程如下:
-![](https://github.com/hsjfans/data_structure/blob/master/asserts/tree/tree_loop_example_preorder.png)
+
+![](../asserts/tree/tree_loop_example_preorder.png)
 
 
 ## References

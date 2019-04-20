@@ -1,0 +1,24 @@
+digraph startgame {
+    node [fontname="SimHei" style = filled];  
+    n1[label="root" color=red];
+    n2[label="a" color=green];
+    n3[label="b" color=yellow];
+    n4[label="c" color=yellow];
+    n5[label="d" color=yellow];
+    n6[label="h" color=green];
+    n7[label="j" color=yellow];
+    rankdir=TB;
+    {        
+        rank=same;
+        n2 -> n3;
+        n3 -> n4;
+        n4 -> n5;
+    }   
+    n1->n2
+    {
+        rank=same;
+        n6->n7;
+    }
+    n4->n6
+    
+}

@@ -1,4 +1,9 @@
 digraph tree{
-    root-> b -> c;
-    root-> g;
+    node[style = filled]
+    root[color=red]; # 根节点
+    b,d,e,g,h[color=green] # leaf 节点
+    a,c[color=yellow] # sibling
+    root-> {a,b,c,d}[color=blue]; 
+    a->{e}[color=blue];
+    c->{g,h}[color=blue];
 }

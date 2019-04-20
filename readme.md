@@ -18,9 +18,9 @@
 - [x] [double_linked_list](./docs/double_linked_list.md)
 - [x] [queue](./docs/queue.md)
 - [x] [stack](./docs/stack.md)
-- [ ] [skip_list](./docs/skip_list.md)
+- [x] [skip_list](./docs/skip_list.md)
 - [ ] and other ...
-
+ 
 ### string
 - [ ] [string](./docs/string.md)
 

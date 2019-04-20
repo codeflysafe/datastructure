@@ -1,0 +1,4 @@
+digraph tree{
+    root-> b -> c;
+    root-> g;
+}

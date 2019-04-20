@@ -25,6 +25,7 @@
 - [ ] [string](./docs/string.md)
 
 ### tree
+- [ ] [tree](./docs/tree.md)
 - [ ] [binary_tree](./docs/binary_tree.md)
 - [ ] [avl_tree](./docs/avl_tree.md)
 - [ ] [heap](./docs/heap.md) min and max heap
@@ -62,4 +63,5 @@
 - [ ] [stack](./test/stack.c)
 - [ ] [skip_list](./test/skip_list.c)
 - [ ] and other ...
+
 

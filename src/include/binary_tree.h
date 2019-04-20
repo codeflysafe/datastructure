@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-04-11 11:18:50
- * @LastEditTime: 2019-04-11 11:28:50
+ * @LastEditTime: 2019-04-20 17:10:44
  */
 #ifndef BINARY_TREE
 #define BINARY_TREE
@@ -13,8 +13,8 @@
 typedef struct binary_tree_node
 {
     Element element;
-    binary_tree_node *left;  // left child node
-    binary_tree_node *right; // right child node
+    struct binary_tree_node *left;  // left child node
+    struct binary_tree_node *right;  // right child node
 
 } BinaryTreeNode;
 
@@ -28,6 +28,10 @@ typedef struct binary_tree
 
 BinaryTree *binary_tree_new();
 
-void add(Element e, BinaryTree *tree);
+void *binary_tree_preorder(BinaryTreeNode *node);
+
+void *binary_tree_postorder(BinaryTreeNode *node);
+
+void *binary_tree_inorder(BinaryTreeNode *node);
 
 #endif

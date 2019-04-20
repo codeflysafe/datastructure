@@ -1,0 +1,11 @@
+digraph binary_tree_outline{
+   node[style=filled];
+   root[color=red];
+   edge[color=blue];
+   left,right[color=green];
+   a,b,c,d[color=pink]
+   root->{left,right};
+   left->{a};
+   right->{b,c};
+   b->d;
+}

@@ -1,0 +1,21 @@
+digraph expression_tree{
+    node[style=filled];
+    rankdir=TB;
+    multi_1[label="*"];
+    multi_2[label="*"];
+    multi_3[label="*"];
+    plus_1[label="+"];
+    plus_2[label="+"];
+    plus_3[label="+"];
+    multi_1,multi_2,multi_3,plus_1,plus_2,plus_3[color=red];
+    a,b,c,d,e,f,g[color=green];
+    plus_1->{plus_2,multi_3};
+    multi_1->{b,c};
+    multi_2->{d,e};
+    plus_2->multi_1;
+    plus_2->a;
+    plus_3->multi_2
+    multi_3->plus_3;
+    plus_3->f;
+    multi_3->g;
+}

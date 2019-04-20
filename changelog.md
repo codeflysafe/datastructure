@@ -5,5 +5,5 @@
 2. add `QuickSort` algorithm docs and Examples
 
 ## 2019/04/20
-1. drawing by `graphviz`,substitute for `ppt`
+1. drawing by `graphviz`,substitute for (😂 instead of) `ppt`
 2. add `tree` concepts and simple introduction

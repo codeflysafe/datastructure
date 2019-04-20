@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-04-20 12:12:30
- * @LastEditTime: 2019-04-20 12:16:19
+ * @LastEditTime: 2019-04-20 13:32:31
  */
 #ifndef TREE
 #define TREE
@@ -17,9 +17,17 @@ typedef struct tree_node
 
 } TreeNode;
 
+// create an new treeNode
+TreeNode *tree_node_new(Element e, TreeNode *nextSibling, TreeNode *firstChild);
+
 typedef struct tree
 {
-    TreeNode *root;
+    TreeNode *root; // the root treeNode 
+    int size;       // the num of node
 } Tree;
+
+// create an empty tree
+Tree *tree_new();
+
 
 #endif

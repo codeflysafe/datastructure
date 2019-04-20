@@ -11,8 +11,7 @@
 4. 具有同一个`父节点`(`parent`)的节点，为`兄弟节点`(`sibling`)
 5. 对于任意节点n,它的**深度**为其到跟节点的路径的`边数`
 
-它的结构通常如下:
-
+它的结构通常如下
 ![tree.png](../asserts/tree/tree.png)
 
 红色为根节点，绿色是叶子节点，蓝色是边，黄色是兄弟节点(未画全)。
@@ -52,5 +51,40 @@ typedef struct tree
 ![tree_preview.png](../asserts/tree/tree_preview.png)
 
 绿色节点代表第一个子节点(first child), 黄色代表下一个兄弟节点(sibling node)
+
+
+### 树的遍历
+
+树比较典型的应用是`unix文件系统`，而它的使用核心是对树的遍历。其实从树的定义中可以很清晰的看出，它很符合递归的特点,因此对树的遍历通常是应用递归的方法。
+
+对树的遍历按照先后顺序通常分为以下几种:
+
+1. 先序遍历
+2. 后序遍历
+3. 层序遍历
+4. DFS 
+5. BFS 
+6. ...
+
+以下图为例，演示遍历过程[1,2,3]。
+**(4,5,6)在后面的图中会体现**
+
+![tree_preview.png](../asserts/tree/tree_loop_example.png)
+
+对于`1、2`种遍历方式，它们之前很相似，只是相互之间的顺序问题。
+
+#### 先序遍历
+它的特点是:先处理节点，再处理节点下的子节点(子节点按照从左到右处理)。
+
+先序遍历的结果为:
+`k->b->d->a->e->c->g->h`
+
+其过程如下:
+![](https://github.com/hsjfans/data_structure/blob/master/asserts/tree/tree_loop_example_preorder.png)
+
+
+## References
+1. 数据结构与算法分析
+2. [youtube data structure](https://www.youtube.com/watch?v=qH6yxkw0u78&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P&index=25)
 
 

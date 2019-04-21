@@ -4,6 +4,8 @@
 1. 子节点不超过两个
 2. 它的平均深度其平均值为`O(N^(1/2))`
 3. 它可以退化成链表，此时，深度最大为`N-1`
+4. 在第i层(i>=1)，它的元素个数最多为2^(i-1)个。
+5. 深度为k的二叉树，它的元素个数最多为2^k-1个。
 
 示意图如下:
 
@@ -41,7 +43,7 @@ typedef struct binary_tree
 
 因为普通的二叉树与普通的`tree`，类似应用不多，重点是一些特别二叉树
 
-1. [search_tree](./search_tree.md)
+1. [binary_search_tree](./binary_search_tree.md)
 2. [avl_tree](./avl_tree.md)
 3. ...
 
@@ -137,75 +139,7 @@ void *binary_tree_postorder(BinaryTreeNode *node)
 
 ## 二叉树的应用
 
-关于二叉树有一些相关的应用(刷题时间)
-
-### [leetcode-94 Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)
-
-二叉树的非递归遍历之中序遍历
-```c++
-
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
-class Solution {
-public:
-    vector<int> inorderTraversal(TreeNode* root) {
-        stack<TreeNode *> s;
-        vector<int> data;
-        TreeNode *p = root;
-        while (p || !s.empty())
-        {
-            while (p)
-            {
-                s.push(p);
-                p = p->left;
-            }
-            if (!s.empty())
-            {
-                p = s.top();
-                data.push_back(p->val);
-                s.pop();
-                p = p->right;
-            }
-        }
-         return data;
-    }
-};
-
-```
-
-
-
-```c++
-vector<int> preorderTraversal(TreeNode* root) {
-        stack<TreeNode *> s;
-        vector<int> data;
-        TreeNode *p = root;
-        while (p || !s.empty())
-        {
-            while (p)
-            {
-                s.push(p);
-                data.push_back(p->val);
-                p = p->left;
-            }
-            if (!s.empty())
-            {
-                p = s.top();
-                s.pop();
-                p = p->right;
-            }
-        }
-         return data;
-    }
-
-```
+与二叉树相关的应用或者习题很多，详见[binary_tree_algorithm](./binary_tree_algorithm.md)
 
 
 

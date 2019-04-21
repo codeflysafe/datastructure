@@ -1,0 +1,7 @@
+digraph binary_tree_outline{
+   null_1,null_2[label="null"]
+   a->{b,c};
+   b->{d,e};
+   e->{null_1,g};
+   c->{null_2,f}
+}

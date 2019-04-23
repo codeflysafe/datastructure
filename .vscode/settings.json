@@ -22,6 +22,7 @@
         "queue.h": "c",
         "limits.h": "c",
         "tree.h": "c",
-        "binary_search_tree.h": "c"
+        "binary_search_tree.h": "c",
+        "avl_tree.h": "c"
     }
 }

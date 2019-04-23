@@ -1,0 +1,8 @@
+digraph avl_rotate{
+   node[shape=triangle];
+   k1->k2;
+   k2->z;
+   k2->y;
+   k1->x;
+   x[height=2.0,width=2.0];
+}

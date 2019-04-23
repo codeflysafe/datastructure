@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-04-22 12:23:24
- * @LastEditTime: 2019-04-22 13:24:42
+ * @LastEditTime: 2019-04-23 20:27:53
  */
 
 #ifndef BINARY_SEARCH_TREE
@@ -31,5 +31,7 @@ Position find_max(SearchTree t);
 SearchTree insert(Element e, SearchTree t, compare_func cmp);
 // remove an element from tree
 SearchTree remove(Element e, SearchTree t, compare_func cmp);
+// return the height of the tree
+int height(SearchTree t);
 
 #endif

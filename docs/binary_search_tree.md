@@ -222,6 +222,26 @@ SearchTree remove(Element e, SearchTree t, compare_func cmp)
 ```
 
 
+## Time complexity 
+
+时间复杂度分析:
+
+一棵树的所有节点的深度和，定义为内部路径长。
+
+定义D(N)为节点树为N的树的内部路径长，它由一个i节点的左子树和(N-i-1)的右子树以及一个根节点组成。
+则由:
+1. D(1) = D(0) =  0 
+2. D(N) = D(i)+D(N-i-1)+N-1 0<=i<N
+   
+求解可以得到:
+
+D(N) = 
+
+
+
+
+
+
 ## Implement
 
 [binary_search_tree](../src/binary_search_tree.c)

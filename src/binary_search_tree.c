@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-04-22 12:33:40
- * @LastEditTime: 2019-04-23 09:44:57
+ * @LastEditTime: 2019-04-23 20:31:54
  */
 
 #include "include/binary_search_tree.h"
@@ -131,4 +131,18 @@ SearchTree remove(Element e, SearchTree t, compare_func cmp)
         }
     }
     return node;
+}
+
+int height(SearchTree t)
+{
+    if (t == NULL)
+    {
+        return 0;
+    }
+    if (t)
+    {
+        int l = height(t->left);
+        int r = height(t->right);
+        return l > r ? l + 1 : r + 1;
+    }
 }

@@ -1,0 +1,13 @@
+digraph avl_tree{
+    
+    node[style=filled];
+    10->{2,13};
+    2->{1,7};
+    7->{8};
+     8->-1[style=invis];
+    -1[style=invis];
+    8->9[color=red];
+    9[color=red];
+    13->{12,14};
+   
+}

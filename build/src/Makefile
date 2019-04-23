@@ -78,6 +78,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/local/Cellar/cmake/3.13.4/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /Volumes/doc/projects/c/data_structure/build && $(CMAKE_COMMAND) -E cmake_progress_start /Volumes/doc/projects/c/data_structure/build/CMakeFiles /Volumes/doc/projects/c/data_structure/build/src/CMakeFiles/progress.marks
@@ -110,6 +121,396 @@ depend:
 	cd /Volumes/doc/projects/c/data_structure/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+src/CMakeFiles/collectc_static.dir/rule:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/collectc_static.dir/rule
+.PHONY : src/CMakeFiles/collectc_static.dir/rule
+
+# Convenience name for target.
+collectc_static: src/CMakeFiles/collectc_static.dir/rule
+
+.PHONY : collectc_static
+
+# fast build rule for target.
+collectc_static/fast:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/build
+.PHONY : collectc_static/fast
+
+# Convenience name for target.
+src/CMakeFiles/collectc.dir/rule:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/collectc.dir/rule
+.PHONY : src/CMakeFiles/collectc.dir/rule
+
+# Convenience name for target.
+collectc: src/CMakeFiles/collectc.dir/rule
+
+.PHONY : collectc
+
+# fast build rule for target.
+collectc/fast:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/build
+.PHONY : collectc/fast
+
+array_list.o: array_list.c.o
+
+.PHONY : array_list.o
+
+# target to build an object file
+array_list.c.o:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/array_list.c.o
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/array_list.c.o
+.PHONY : array_list.c.o
+
+array_list.i: array_list.c.i
+
+.PHONY : array_list.i
+
+# target to preprocess a source file
+array_list.c.i:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/array_list.c.i
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/array_list.c.i
+.PHONY : array_list.c.i
+
+array_list.s: array_list.c.s
+
+.PHONY : array_list.s
+
+# target to generate assembly for a file
+array_list.c.s:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/array_list.c.s
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/array_list.c.s
+.PHONY : array_list.c.s
+
+binary_search_tree.o: binary_search_tree.c.o
+
+.PHONY : binary_search_tree.o
+
+# target to build an object file
+binary_search_tree.c.o:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/binary_search_tree.c.o
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/binary_search_tree.c.o
+.PHONY : binary_search_tree.c.o
+
+binary_search_tree.i: binary_search_tree.c.i
+
+.PHONY : binary_search_tree.i
+
+# target to preprocess a source file
+binary_search_tree.c.i:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/binary_search_tree.c.i
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/binary_search_tree.c.i
+.PHONY : binary_search_tree.c.i
+
+binary_search_tree.s: binary_search_tree.c.s
+
+.PHONY : binary_search_tree.s
+
+# target to generate assembly for a file
+binary_search_tree.c.s:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/binary_search_tree.c.s
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/binary_search_tree.c.s
+.PHONY : binary_search_tree.c.s
+
+binary_tree.o: binary_tree.c.o
+
+.PHONY : binary_tree.o
+
+# target to build an object file
+binary_tree.c.o:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/binary_tree.c.o
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/binary_tree.c.o
+.PHONY : binary_tree.c.o
+
+binary_tree.i: binary_tree.c.i
+
+.PHONY : binary_tree.i
+
+# target to preprocess a source file
+binary_tree.c.i:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/binary_tree.c.i
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/binary_tree.c.i
+.PHONY : binary_tree.c.i
+
+binary_tree.s: binary_tree.c.s
+
+.PHONY : binary_tree.s
+
+# target to generate assembly for a file
+binary_tree.c.s:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/binary_tree.c.s
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/binary_tree.c.s
+.PHONY : binary_tree.c.s
+
+common.o: common.c.o
+
+.PHONY : common.o
+
+# target to build an object file
+common.c.o:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/common.c.o
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/common.c.o
+.PHONY : common.c.o
+
+common.i: common.c.i
+
+.PHONY : common.i
+
+# target to preprocess a source file
+common.c.i:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/common.c.i
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/common.c.i
+.PHONY : common.c.i
+
+common.s: common.c.s
+
+.PHONY : common.s
+
+# target to generate assembly for a file
+common.c.s:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/common.c.s
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/common.c.s
+.PHONY : common.c.s
+
+double_linked_list.o: double_linked_list.c.o
+
+.PHONY : double_linked_list.o
+
+# target to build an object file
+double_linked_list.c.o:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/double_linked_list.c.o
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/double_linked_list.c.o
+.PHONY : double_linked_list.c.o
+
+double_linked_list.i: double_linked_list.c.i
+
+.PHONY : double_linked_list.i
+
+# target to preprocess a source file
+double_linked_list.c.i:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/double_linked_list.c.i
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/double_linked_list.c.i
+.PHONY : double_linked_list.c.i
+
+double_linked_list.s: double_linked_list.c.s
+
+.PHONY : double_linked_list.s
+
+# target to generate assembly for a file
+double_linked_list.c.s:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/double_linked_list.c.s
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/double_linked_list.c.s
+.PHONY : double_linked_list.c.s
+
+linked_list.o: linked_list.c.o
+
+.PHONY : linked_list.o
+
+# target to build an object file
+linked_list.c.o:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/linked_list.c.o
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/linked_list.c.o
+.PHONY : linked_list.c.o
+
+linked_list.i: linked_list.c.i
+
+.PHONY : linked_list.i
+
+# target to preprocess a source file
+linked_list.c.i:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/linked_list.c.i
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/linked_list.c.i
+.PHONY : linked_list.c.i
+
+linked_list.s: linked_list.c.s
+
+.PHONY : linked_list.s
+
+# target to generate assembly for a file
+linked_list.c.s:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/linked_list.c.s
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/linked_list.c.s
+.PHONY : linked_list.c.s
+
+queue.o: queue.c.o
+
+.PHONY : queue.o
+
+# target to build an object file
+queue.c.o:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/queue.c.o
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/queue.c.o
+.PHONY : queue.c.o
+
+queue.i: queue.c.i
+
+.PHONY : queue.i
+
+# target to preprocess a source file
+queue.c.i:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/queue.c.i
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/queue.c.i
+.PHONY : queue.c.i
+
+queue.s: queue.c.s
+
+.PHONY : queue.s
+
+# target to generate assembly for a file
+queue.c.s:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/queue.c.s
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/queue.c.s
+.PHONY : queue.c.s
+
+skip_list.o: skip_list.c.o
+
+.PHONY : skip_list.o
+
+# target to build an object file
+skip_list.c.o:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/skip_list.c.o
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/skip_list.c.o
+.PHONY : skip_list.c.o
+
+skip_list.i: skip_list.c.i
+
+.PHONY : skip_list.i
+
+# target to preprocess a source file
+skip_list.c.i:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/skip_list.c.i
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/skip_list.c.i
+.PHONY : skip_list.c.i
+
+skip_list.s: skip_list.c.s
+
+.PHONY : skip_list.s
+
+# target to generate assembly for a file
+skip_list.c.s:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/skip_list.c.s
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/skip_list.c.s
+.PHONY : skip_list.c.s
+
+stack.o: stack.c.o
+
+.PHONY : stack.o
+
+# target to build an object file
+stack.c.o:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/stack.c.o
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/stack.c.o
+.PHONY : stack.c.o
+
+stack.i: stack.c.i
+
+.PHONY : stack.i
+
+# target to preprocess a source file
+stack.c.i:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/stack.c.i
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/stack.c.i
+.PHONY : stack.c.i
+
+stack.s: stack.c.s
+
+.PHONY : stack.s
+
+# target to generate assembly for a file
+stack.c.s:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/stack.c.s
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/stack.c.s
+.PHONY : stack.c.s
+
+stack_algorithm.o: stack_algorithm.c.o
+
+.PHONY : stack_algorithm.o
+
+# target to build an object file
+stack_algorithm.c.o:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/stack_algorithm.c.o
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/stack_algorithm.c.o
+.PHONY : stack_algorithm.c.o
+
+stack_algorithm.i: stack_algorithm.c.i
+
+.PHONY : stack_algorithm.i
+
+# target to preprocess a source file
+stack_algorithm.c.i:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/stack_algorithm.c.i
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/stack_algorithm.c.i
+.PHONY : stack_algorithm.c.i
+
+stack_algorithm.s: stack_algorithm.c.s
+
+.PHONY : stack_algorithm.s
+
+# target to generate assembly for a file
+stack_algorithm.c.s:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/stack_algorithm.c.s
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/stack_algorithm.c.s
+.PHONY : stack_algorithm.c.s
+
+string.o: string.c.o
+
+.PHONY : string.o
+
+# target to build an object file
+string.c.o:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/string.c.o
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/string.c.o
+.PHONY : string.c.o
+
+string.i: string.c.i
+
+.PHONY : string.i
+
+# target to preprocess a source file
+string.c.i:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/string.c.i
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/string.c.i
+.PHONY : string.c.i
+
+string.s: string.c.s
+
+.PHONY : string.s
+
+# target to generate assembly for a file
+string.c.s:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/string.c.s
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/string.c.s
+.PHONY : string.c.s
+
+tree.o: tree.c.o
+
+.PHONY : tree.o
+
+# target to build an object file
+tree.c.o:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/tree.c.o
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/tree.c.o
+.PHONY : tree.c.o
+
+tree.i: tree.c.i
+
+.PHONY : tree.i
+
+# target to preprocess a source file
+tree.c.i:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/tree.c.i
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/tree.c.i
+.PHONY : tree.c.i
+
+tree.s: tree.c.s
+
+.PHONY : tree.s
+
+# target to generate assembly for a file
+tree.c.s:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/tree.c.s
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/tree.c.s
+.PHONY : tree.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -118,6 +519,45 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test"
+	@echo "... collectc_static"
+	@echo "... collectc"
+	@echo "... array_list.o"
+	@echo "... array_list.i"
+	@echo "... array_list.s"
+	@echo "... binary_search_tree.o"
+	@echo "... binary_search_tree.i"
+	@echo "... binary_search_tree.s"
+	@echo "... binary_tree.o"
+	@echo "... binary_tree.i"
+	@echo "... binary_tree.s"
+	@echo "... common.o"
+	@echo "... common.i"
+	@echo "... common.s"
+	@echo "... double_linked_list.o"
+	@echo "... double_linked_list.i"
+	@echo "... double_linked_list.s"
+	@echo "... linked_list.o"
+	@echo "... linked_list.i"
+	@echo "... linked_list.s"
+	@echo "... queue.o"
+	@echo "... queue.i"
+	@echo "... queue.s"
+	@echo "... skip_list.o"
+	@echo "... skip_list.i"
+	@echo "... skip_list.s"
+	@echo "... stack.o"
+	@echo "... stack.i"
+	@echo "... stack.s"
+	@echo "... stack_algorithm.o"
+	@echo "... stack_algorithm.i"
+	@echo "... stack_algorithm.s"
+	@echo "... string.o"
+	@echo "... string.i"
+	@echo "... string.s"
+	@echo "... tree.o"
+	@echo "... tree.i"
+	@echo "... tree.s"
 .PHONY : help
 
 

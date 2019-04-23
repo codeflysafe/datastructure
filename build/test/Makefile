@@ -78,6 +78,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/local/Cellar/cmake/3.13.4/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /Volumes/doc/projects/c/data_structure/build && $(CMAKE_COMMAND) -E cmake_progress_start /Volumes/doc/projects/c/data_structure/build/CMakeFiles /Volumes/doc/projects/c/data_structure/build/test/CMakeFiles/progress.marks
@@ -111,19 +122,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-test/CMakeFiles/Data_structure_test.dir/rule:
-	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/Data_structure_test.dir/rule
-.PHONY : test/CMakeFiles/Data_structure_test.dir/rule
+test/CMakeFiles/collect_test.dir/rule:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/collect_test.dir/rule
+.PHONY : test/CMakeFiles/collect_test.dir/rule
 
 # Convenience name for target.
-Data_structure_test: test/CMakeFiles/Data_structure_test.dir/rule
+collect_test: test/CMakeFiles/collect_test.dir/rule
 
-.PHONY : Data_structure_test
+.PHONY : collect_test
 
 # fast build rule for target.
-Data_structure_test/fast:
-	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f test/CMakeFiles/Data_structure_test.dir/build.make test/CMakeFiles/Data_structure_test.dir/build
-.PHONY : Data_structure_test/fast
+collect_test/fast:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f test/CMakeFiles/collect_test.dir/build.make test/CMakeFiles/collect_test.dir/build
+.PHONY : collect_test/fast
 
 alloc-testing.o: alloc-testing.c.o
 
@@ -131,7 +142,7 @@ alloc-testing.o: alloc-testing.c.o
 
 # target to build an object file
 alloc-testing.c.o:
-	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f test/CMakeFiles/Data_structure_test.dir/build.make test/CMakeFiles/Data_structure_test.dir/alloc-testing.c.o
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f test/CMakeFiles/collect_test.dir/build.make test/CMakeFiles/collect_test.dir/alloc-testing.c.o
 .PHONY : alloc-testing.c.o
 
 alloc-testing.i: alloc-testing.c.i
@@ -140,7 +151,7 @@ alloc-testing.i: alloc-testing.c.i
 
 # target to preprocess a source file
 alloc-testing.c.i:
-	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f test/CMakeFiles/Data_structure_test.dir/build.make test/CMakeFiles/Data_structure_test.dir/alloc-testing.c.i
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f test/CMakeFiles/collect_test.dir/build.make test/CMakeFiles/collect_test.dir/alloc-testing.c.i
 .PHONY : alloc-testing.c.i
 
 alloc-testing.s: alloc-testing.c.s
@@ -149,7 +160,7 @@ alloc-testing.s: alloc-testing.c.s
 
 # target to generate assembly for a file
 alloc-testing.c.s:
-	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f test/CMakeFiles/Data_structure_test.dir/build.make test/CMakeFiles/Data_structure_test.dir/alloc-testing.c.s
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f test/CMakeFiles/collect_test.dir/build.make test/CMakeFiles/collect_test.dir/alloc-testing.c.s
 .PHONY : alloc-testing.c.s
 
 array_list_test.o: array_list_test.c.o
@@ -158,7 +169,7 @@ array_list_test.o: array_list_test.c.o
 
 # target to build an object file
 array_list_test.c.o:
-	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f test/CMakeFiles/Data_structure_test.dir/build.make test/CMakeFiles/Data_structure_test.dir/array_list_test.c.o
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f test/CMakeFiles/collect_test.dir/build.make test/CMakeFiles/collect_test.dir/array_list_test.c.o
 .PHONY : array_list_test.c.o
 
 array_list_test.i: array_list_test.c.i
@@ -167,7 +178,7 @@ array_list_test.i: array_list_test.c.i
 
 # target to preprocess a source file
 array_list_test.c.i:
-	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f test/CMakeFiles/Data_structure_test.dir/build.make test/CMakeFiles/Data_structure_test.dir/array_list_test.c.i
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f test/CMakeFiles/collect_test.dir/build.make test/CMakeFiles/collect_test.dir/array_list_test.c.i
 .PHONY : array_list_test.c.i
 
 array_list_test.s: array_list_test.c.s
@@ -176,7 +187,7 @@ array_list_test.s: array_list_test.c.s
 
 # target to generate assembly for a file
 array_list_test.c.s:
-	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f test/CMakeFiles/Data_structure_test.dir/build.make test/CMakeFiles/Data_structure_test.dir/array_list_test.c.s
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f test/CMakeFiles/collect_test.dir/build.make test/CMakeFiles/collect_test.dir/array_list_test.c.s
 .PHONY : array_list_test.c.s
 
 framework.o: framework.c.o
@@ -185,7 +196,7 @@ framework.o: framework.c.o
 
 # target to build an object file
 framework.c.o:
-	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f test/CMakeFiles/Data_structure_test.dir/build.make test/CMakeFiles/Data_structure_test.dir/framework.c.o
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f test/CMakeFiles/collect_test.dir/build.make test/CMakeFiles/collect_test.dir/framework.c.o
 .PHONY : framework.c.o
 
 framework.i: framework.c.i
@@ -194,7 +205,7 @@ framework.i: framework.c.i
 
 # target to preprocess a source file
 framework.c.i:
-	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f test/CMakeFiles/Data_structure_test.dir/build.make test/CMakeFiles/Data_structure_test.dir/framework.c.i
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f test/CMakeFiles/collect_test.dir/build.make test/CMakeFiles/collect_test.dir/framework.c.i
 .PHONY : framework.c.i
 
 framework.s: framework.c.s
@@ -203,8 +214,35 @@ framework.s: framework.c.s
 
 # target to generate assembly for a file
 framework.c.s:
-	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f test/CMakeFiles/Data_structure_test.dir/build.make test/CMakeFiles/Data_structure_test.dir/framework.c.s
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f test/CMakeFiles/collect_test.dir/build.make test/CMakeFiles/collect_test.dir/framework.c.s
 .PHONY : framework.c.s
+
+tree_test.o: tree_test.c.o
+
+.PHONY : tree_test.o
+
+# target to build an object file
+tree_test.c.o:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f test/CMakeFiles/collect_test.dir/build.make test/CMakeFiles/collect_test.dir/tree_test.c.o
+.PHONY : tree_test.c.o
+
+tree_test.i: tree_test.c.i
+
+.PHONY : tree_test.i
+
+# target to preprocess a source file
+tree_test.c.i:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f test/CMakeFiles/collect_test.dir/build.make test/CMakeFiles/collect_test.dir/tree_test.c.i
+.PHONY : tree_test.c.i
+
+tree_test.s: tree_test.c.s
+
+.PHONY : tree_test.s
+
+# target to generate assembly for a file
+tree_test.c.s:
+	cd /Volumes/doc/projects/c/data_structure/build && $(MAKE) -f test/CMakeFiles/collect_test.dir/build.make test/CMakeFiles/collect_test.dir/tree_test.c.s
+.PHONY : tree_test.c.s
 
 # Help Target
 help:
@@ -214,7 +252,8 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Data_structure_test"
+	@echo "... test"
+	@echo "... collect_test"
 	@echo "... alloc-testing.o"
 	@echo "... alloc-testing.i"
 	@echo "... alloc-testing.s"
@@ -224,6 +263,9 @@ help:
 	@echo "... framework.o"
 	@echo "... framework.i"
 	@echo "... framework.s"
+	@echo "... tree_test.o"
+	@echo "... tree_test.i"
+	@echo "... tree_test.s"
 .PHONY : help
 
 

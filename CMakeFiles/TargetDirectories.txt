@@ -1,0 +1,12 @@
+/Volumes/doc/projects/c/data_structure/CMakeFiles/rebuild_cache.dir
+/Volumes/doc/projects/c/data_structure/CMakeFiles/edit_cache.dir
+/Volumes/doc/projects/c/data_structure/CMakeFiles/test.dir
+/Volumes/doc/projects/c/data_structure/src/CMakeFiles/rebuild_cache.dir
+/Volumes/doc/projects/c/data_structure/src/CMakeFiles/edit_cache.dir
+/Volumes/doc/projects/c/data_structure/src/CMakeFiles/test.dir
+/Volumes/doc/projects/c/data_structure/src/CMakeFiles/collectc_static.dir
+/Volumes/doc/projects/c/data_structure/src/CMakeFiles/collectc.dir
+/Volumes/doc/projects/c/data_structure/test/CMakeFiles/rebuild_cache.dir
+/Volumes/doc/projects/c/data_structure/test/CMakeFiles/edit_cache.dir
+/Volumes/doc/projects/c/data_structure/test/CMakeFiles/test.dir
+/Volumes/doc/projects/c/data_structure/test/CMakeFiles/collect_test.dir

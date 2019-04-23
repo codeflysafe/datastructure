@@ -78,6 +78,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/local/Cellar/cmake/3.13.4/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Volumes/doc/projects/c/data_structure/CMakeFiles /Volumes/doc/projects/c/data_structure/CMakeFiles/progress.marks
@@ -111,43 +122,43 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named data_structure_c_static
+# Target rules for targets named collectc_static
 
 # Build rule for target.
-data_structure_c_static: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 data_structure_c_static
-.PHONY : data_structure_c_static
+collectc_static: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 collectc_static
+.PHONY : collectc_static
 
 # fast build rule for target.
-data_structure_c_static/fast:
-	$(MAKE) -f src/CMakeFiles/data_structure_c_static.dir/build.make src/CMakeFiles/data_structure_c_static.dir/build
-.PHONY : data_structure_c_static/fast
+collectc_static/fast:
+	$(MAKE) -f src/CMakeFiles/collectc_static.dir/build.make src/CMakeFiles/collectc_static.dir/build
+.PHONY : collectc_static/fast
 
 #=============================================================================
-# Target rules for targets named data_structure_c
+# Target rules for targets named collectc
 
 # Build rule for target.
-data_structure_c: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 data_structure_c
-.PHONY : data_structure_c
+collectc: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 collectc
+.PHONY : collectc
 
 # fast build rule for target.
-data_structure_c/fast:
-	$(MAKE) -f src/CMakeFiles/data_structure_c.dir/build.make src/CMakeFiles/data_structure_c.dir/build
-.PHONY : data_structure_c/fast
+collectc/fast:
+	$(MAKE) -f src/CMakeFiles/collectc.dir/build.make src/CMakeFiles/collectc.dir/build
+.PHONY : collectc/fast
 
 #=============================================================================
-# Target rules for targets named Data_structure_test
+# Target rules for targets named collect_test
 
 # Build rule for target.
-Data_structure_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Data_structure_test
-.PHONY : Data_structure_test
+collect_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 collect_test
+.PHONY : collect_test
 
 # fast build rule for target.
-Data_structure_test/fast:
-	$(MAKE) -f test/CMakeFiles/Data_structure_test.dir/build.make test/CMakeFiles/Data_structure_test.dir/build
-.PHONY : Data_structure_test/fast
+collect_test/fast:
+	$(MAKE) -f test/CMakeFiles/collect_test.dir/build.make test/CMakeFiles/collect_test.dir/build
+.PHONY : collect_test/fast
 
 # Help Target
 help:
@@ -157,9 +168,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... data_structure_c_static"
-	@echo "... data_structure_c"
-	@echo "... Data_structure_test"
+	@echo "... test"
+	@echo "... collectc_static"
+	@echo "... collectc"
+	@echo "... collect_test"
 .PHONY : help
 
 

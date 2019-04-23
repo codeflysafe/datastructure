@@ -3,16 +3,14 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-04-18 18:59:14
- * @LastEditTime: 2019-04-18 19:00:15
+ * @LastEditTime: 2019-04-23 13:04:49
  */
 
 #ifndef STRING
 #define STRING
 
-typedef struct string
-{
-    char *data;
-    int length;
-} String;
+struct string;
+
+typedef struct string String;
 
 #endif

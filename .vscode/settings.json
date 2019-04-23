@@ -21,6 +21,7 @@
         "double_linked_list.h": "c",
         "queue.h": "c",
         "limits.h": "c",
-        "tree.h": "c"
+        "tree.h": "c",
+        "binary_search_tree.h": "c"
     }
 }

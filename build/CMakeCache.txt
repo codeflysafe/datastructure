@@ -212,9 +212,6 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//pkg-config executable
-PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/local/bin/pkg-config
-
 //Value Computed by CMake
 Project_BINARY_DIR:STATIC=/Volumes/doc/projects/c/data_structure/build
 
@@ -222,31 +219,16 @@ Project_BINARY_DIR:STATIC=/Volumes/doc/projects/c/data_structure/build
 Project_SOURCE_DIR:STATIC=/Volumes/doc/projects/c/data_structure
 
 //Value Computed by CMake
+collect_test_BINARY_DIR:STATIC=/Volumes/doc/projects/c/data_structure/build/test
+
+//Value Computed by CMake
+collect_test_SOURCE_DIR:STATIC=/Volumes/doc/projects/c/data_structure/test
+
+//Value Computed by CMake
 collectc_BINARY_DIR:STATIC=/Volumes/doc/projects/c/data_structure/build/src
 
 //Value Computed by CMake
 collectc_SOURCE_DIR:STATIC=/Volumes/doc/projects/c/data_structure/src
-
-//Value Computed by CMake
-collectc_test_BINARY_DIR:STATIC=/Volumes/doc/projects/c/data_structure/build/test
-
-//Value Computed by CMake
-collectc_test_SOURCE_DIR:STATIC=/Volumes/doc/projects/c/data_structure/test
-
-//Value Computed by CMake
-data_structure_BINARY_DIR:STATIC=/Volumes/doc/projects/c/data_structure/build
-
-//Value Computed by CMake
-data_structure_SOURCE_DIR:STATIC=/Volumes/doc/projects/c/data_structure
-
-//Value Computed by CMake
-data_structure_c_BINARY_DIR:STATIC=/Volumes/doc/projects/c/data_structure/build/src
-
-//Dependencies for the target
-data_structure_c_LIB_DEPENDS:STATIC=general;Data_structure_test;
-
-//Value Computed by CMake
-data_structure_c_SOURCE_DIR:STATIC=/Volumes/doc/projects/c/data_structure/src
 
 
 ########################
@@ -384,34 +366,4 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-CPPUTEST_CFLAGS:INTERNAL=
-CPPUTEST_CFLAGS_I:INTERNAL=
-CPPUTEST_CFLAGS_OTHER:INTERNAL=
-CPPUTEST_FOUND:INTERNAL=
-CPPUTEST_INCLUDEDIR:INTERNAL=
-CPPUTEST_LIBDIR:INTERNAL=
-CPPUTEST_LIBS:INTERNAL=
-CPPUTEST_LIBS_L:INTERNAL=
-CPPUTEST_LIBS_OTHER:INTERNAL=
-CPPUTEST_LIBS_PATHS:INTERNAL=
-CPPUTEST_PREFIX:INTERNAL=
-CPPUTEST_STATIC_CFLAGS:INTERNAL=
-CPPUTEST_STATIC_CFLAGS_I:INTERNAL=
-CPPUTEST_STATIC_CFLAGS_OTHER:INTERNAL=
-CPPUTEST_STATIC_LIBDIR:INTERNAL=
-CPPUTEST_STATIC_LIBS:INTERNAL=
-CPPUTEST_STATIC_LIBS_L:INTERNAL=
-CPPUTEST_STATIC_LIBS_OTHER:INTERNAL=
-CPPUTEST_STATIC_LIBS_PATHS:INTERNAL=
-CPPUTEST_VERSION:INTERNAL=
-CPPUTEST_cpputest_INCLUDEDIR:INTERNAL=
-CPPUTEST_cpputest_LIBDIR:INTERNAL=
-CPPUTEST_cpputest_PREFIX:INTERNAL=
-CPPUTEST_cpputest_VERSION:INTERNAL=
-//Details about finding PkgConfig
-FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/local/bin/pkg-config][v0.29.2()]
-//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
-PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
-//collectc: Include directories
-collectc_INCLUDE_DIRS:INTERNAL=/Volumes/doc/projects/c/data_structure/src/include
 

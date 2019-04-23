@@ -1,0 +1,7 @@
+digraph binary_search_tree{
+   node[style=filled,color=red];
+   6->{2,8};
+   2->{1,4};
+   4->3;
+   4->7;
+}

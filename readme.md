@@ -26,7 +26,8 @@
 
 ### tree
 - [x] [tree](./docs/tree.md)
-- [ ] [binary_tree](./docs/binary_tree.md)
+- [x] [binary_tree](./docs/binary_tree.md)
+- [ ] [binary_search_tree](./docs/binary_search_tree.md)
 - [ ] [avl_tree](./docs/avl_tree.md)
 - [ ] [heap](./docs/heap.md) min and max heap
 - [ ] [red_black_tree](./docs/red_black_tree.md)

@@ -184,6 +184,12 @@ SearchTree insert(Element e, SearchTree t, compare_func cmp)
 
 两个节点的删除，这个情况比较复杂，不过由于它的右子树的最小节点没有左节点，故将该节点使用右子树的最小节点来代替即可。
 
+![](../asserts/binary_search_tree/origin.png)
+
+删除`节点2` 示意图
+
+![](../asserts/binary_search_tree/delete_two.png)
+
 ```c
 SearchTree remove(Element e, SearchTree t, compare_func cmp)
 {

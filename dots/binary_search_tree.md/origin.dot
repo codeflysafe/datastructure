@@ -1,0 +1,7 @@
+digraph bianry_search_delete_node {
+    node[style=filled,color=green];
+    6->{2,8};
+    2->1;
+    2->4;
+    4->{3};
+}

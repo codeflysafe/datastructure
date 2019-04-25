@@ -76,6 +76,31 @@
 ![](https://raw.githubusercontent.com/hsjfans/git_resource/master/20190425091808.png)
 
 
+## 实现
+
+## 数据结构
+
+从定义和流程上，综合考虑，可以采取一下节点结构
+
+```c
+struct BTreeNode
+{
+    int num; // the value num in this node
+    struct BTreeNode *ptr[M+1]; // the ptr collection + 1 
+    Element *elements[M+1]; // the value collection + 1 
+};
+
+```
+
+其中:
+1. `num`代表该节点拥有的关键词个数
+2. `M`是指树的阶数
+3. M+1是为了在调整过程中更加方便
+4. `ptr` 是一个指针数组，指向它的孩子节点
+5. `elements`代表为关键词
+
+因为，一旦定义了阶数，关键词和指针的最大数量就可以唯一确定了，所以采用数组更加合理，而且可以高效的访问，删除只需要将固定索引的指针和值置为`NULL`
+
 ## Reference
 
 1. [the linux b-tree filesystem](https://domino.research.ibm.com/library/cyberdig.nsf/papers/6E1C5B6A1B6EDD9885257A38006B6130/$File/rj10501.pdf)

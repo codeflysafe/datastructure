@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-02-28 14:21:46
- * @LastEditTime: 2019-04-10 17:35:33
+ * @LastEditTime: 2019-04-23 23:13:44
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -40,7 +40,7 @@ ArrayList *array_list_new(unsigned int cap)
     temp->length = 0;
 
     // allocate the data array
-    temp->elements = malloc(cap * sizeof(Element));
+    temp->elements = (Element *)malloc(cap * sizeof(Element));
     if (temp->elements == NULL)
     {
         // release the space
@@ -198,7 +198,7 @@ void array_list_extend(ArrayList *array, unsigned int new_cap)
         return;
     }
     Element *data;
-    data = realloc(array->elements, new_cap * sizeof(Element));
+    data = (Element *)realloc(array->elements, new_cap * sizeof(Element));
     if (data == NULL)
     {
         return;

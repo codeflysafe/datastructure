@@ -180,6 +180,10 @@ AvlTree remove(Element e, AvlTree t, compare_func cmp)
 
 ```
 
+// TODO
+更多删除方法，请见
+...
+
 ## Implement
 
 [avl_tree](../src/avl_tree.c)

@@ -1,0 +1,7 @@
+digraph b_tree{
+   node[style=green,shape="rectangle"];
+   root[label="21,48,72"];
+   node1[label="12,15,"];
+   root->{node1}
+}
+

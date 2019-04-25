@@ -1,0 +1,4 @@
+digraph b_tree_insert{
+   node[style=filled,shape=rectangle];
+ 
+}

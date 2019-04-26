@@ -88,6 +88,7 @@ struct BTreeNode
     int num; // the value num in this node
     struct BTreeNode *ptr[M+1]; // the ptr collection + 1 
     Element *elements[M+1]; // the value collection + 1 
+    boolean isLeaf;               // is leaf or not
 };
 
 ```
@@ -98,12 +99,17 @@ struct BTreeNode
 3. M+1是为了在调整过程中更加方便
 4. `ptr` 是一个指针数组，指向它的孩子节点
 5. `elements`代表为关键词
+6. 是否为叶子节点
 
 因为，一旦定义了阶数，关键词和指针的最大数量就可以唯一确定了，所以采用数组更加合理，而且可以高效的访问，删除只需要将固定索引的指针和值置为`NULL`
+
+
+
+
 
 ## Reference
 
 1. [the linux b-tree filesystem](https://domino.research.ibm.com/library/cyberdig.nsf/papers/6E1C5B6A1B6EDD9885257A38006B6130/$File/rj10501.pdf)
 2. [the ubiquitous b-tree](http://people.cs.aau.dk/~simas/aalg06/UbiquitBtree.pdf)
-
 3. 数据结构与算法分析
+4. 算法导论

@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-04-24 13:07:51
- * @LastEditTime: 2019-04-26 08:31:52
+ * @LastEditTime: 2019-04-26 17:35:48
  */
 
 #include "include/b_tree.h"
@@ -11,10 +11,10 @@
 
 struct BTreeNode
 {
-    int num;                      // the value num in this node
-    struct BTreeNode *ptr[M + 1]; // the ptr collection + 1 . the true value start from 1 --- M +1 (left node)
-    Element *elements[M + 1];     // the value collection + 1;i-1 from 0 - M+1
-    boolean isLeaf;               // is leaf or not
+    int num;                  // the value num in this node
+    struct BTreeNode *ptr[M]; // the point to child node
+    Element *elements[M];     // the num of keywords [M/2] =< range  < =M
+    boolean isLeaf;           // is leaf or not. the ptr is empty array when the node  is leaf,
 };
 
 // Recursive make the tree to empty
@@ -35,9 +35,24 @@ BTree make_empty(BTree t)
 // find the key
 Position find(Element e, BTree t, compare_func cmp)
 {
-
+    if (t != NULL)
+    {
+        int i = 0;
+        while (i < t->num)
+        {
+            int cp = cmp(e, t->elements[i]);
+            if (cp == 0)
+                return t;
+            else if (cp > 0 && !t->isLeaf)
+            {
+                return find(e, t->ptr[i], cmp);
+            }
+            i++;    
+        }
+    }
     return NULL;
 }
+
 
 Position find_min(BTree t)
 {

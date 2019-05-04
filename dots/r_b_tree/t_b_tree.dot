@@ -1,0 +1,10 @@
+digraph r_b{
+   node[style=filled,color=grey];
+   2,16[color=red]
+   11->nil;
+   11->2;
+   11->16;
+   2->{1,3};
+   16->{12,18};
+   {1,3,12,18}->nil;
+}

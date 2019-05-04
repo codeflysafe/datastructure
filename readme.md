@@ -29,15 +29,18 @@
 - [x] [binary_tree](./docs/binary_tree.md)
 - [x] [binary_search_tree](./docs/binary_search_tree.md)
 - [x] [avl_tree](./docs/avl_tree.md)
-- [ ] [heap](./docs/heap.md) min and max heap
 - [ ] [red_black_tree](./docs/red_black_tree.md)
 - [ ] [b_tree](./docs/b_tree.md)
+- [ ] [b_plus_tree](./docs/b_plus_tree.md)
 - [ ] [segment_tree](./docs/segment_tree.md)
 - [ ] [prefix_tree](./docs/prefix_tree.md)
 - [ ]  and other ...
   
 ### map
 - [ ] [hash_table](./docs/hash_table.md) tree_map;hash_table 
+
+### heap
+- [ ] [heap](./docs/heap.md) min and max heap
 
 ### set
 - [ ] [set](./docs/set.md) tree_set;...

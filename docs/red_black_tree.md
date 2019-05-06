@@ -94,7 +94,7 @@
 
 #### 抽象
 
-对于以上可以分为三种状态(或6种，因为左右情况对称)。
+对于以上可以分为三种状态(或6种，因为左右情况对称,下面已左面情况为例)。
 ```Insert(x)```,`x` 是插入的节点，`f(x)` 是其父节点，`f(f(x))` 是其祖父节点 `uncle of x as u(x)` 是其叔叔节点（y）。
 
 单线条是黑色节点，双线条是红色
@@ -115,6 +115,16 @@ color[u(x)] = BLACK
 ```
 此时，可以解决节点x的颜色冲突。
 
+```c
+void re_color(RBTreeNode b)
+{
+    b->parent->color = RED;
+    b->parent->left->color = BLACK;
+    b->parent->right->color = BLACK;
+    return;
+}
+
+```
 
 ##### case-2
 
@@ -129,6 +139,36 @@ c->left = b
 b->parent = c
 a->parent= c->parent
 c->parent = a
+
+```
+
+```c
+void left_rotation(RBTree t, RBTreeNode a)
+{
+    RBTreeNode b = a->right;
+    a->right = b->left;
+    if (a->left != NULL)
+    {
+        b->left->parent = a;
+    }
+    b->parent = a->parent;
+    if (a->parent == NULL)
+    {
+        t->root = b;
+    }
+    else if (a == b->parent->left)
+    {
+        a->parent->left = b;
+    }
+    else
+    {
+        a->parent->right = b;
+    }
+
+    b->left = a;
+    a->parent = b;
+}
+
 
 ```
 
@@ -154,6 +194,136 @@ color[c] = RED
 ```
 
 
+```c
+// right rotation
+void right_rotation(RBTree t, RBTreeNode a)
+{
+    RBTreeNode b = a->parent;
+    a->parent = b->parent;
+    if (b->parent == NULL)
+    {
+        t->root = a;
+    }
+    else if (b->parent->left == b)
+    {
+        b->parent->left = a;
+    }
+    else
+    {
+        b->parent->right = a;
+    }
+    if (a->right != NULL)
+    {
+        a->right->parent = b;
+    }
+    b->left = a->right;
+    b->parent = a;
+    a->right = b;
+}
+
+```
+
+
+#### complicate
+
+```c
+
+void insert(RBTree t, Element e, compare_func cmp)
+{
+    RBTreeNode root = t->root;
+    RBTreeNode temp = t->nil;
+    while (root != t->nil)
+    {
+        temp = root;
+        if (cmp(e, root->val) < 0)
+        {
+            root = root->left;
+        }
+        else
+        {
+            root = root->right;
+        }
+    }
+
+    RBTreeNode n = make_node(e);
+    n->parent = temp;
+    if (temp == t->nil)
+    {
+        t->root = n;
+    }
+    else if (cmp(e, temp->val) < 0)
+    {
+        temp->left = n;
+    }
+    else
+    {
+        temp->right = n;
+    }
+    n->left = t->nil;
+    n->right = t->nil;
+    n->color = RED;
+    insert_fix_up(t, n);
+    return;
+}
+
+void insert_fix_up(RBTree t, RBTreeNode n)
+{
+    while (n->parent->color == RED)
+    {
+        // left child subtree
+        if (n->parent == n->parent->parent->left)
+        {
+
+            RBTreeNode y = n->parent->parent->left;
+            // case-1
+            if (y->color == RED)
+            {
+                re_color(n->parent);
+                n = n->parent->parent;
+            }
+            // case 2
+            else if (n == n->parent->right)
+            {
+                n = n->parent;
+                left_rotation(t, n);
+            }
+            // case 3
+            else
+            {
+                n->parent->color = BLACK;
+                n->parent->parent->color = RED;
+                right_rotation(t, n->parent->parent);
+            }
+        }
+        // right subtree
+        else
+        {
+            RBTreeNode y = n->parent->parent->right;
+            // case-1
+            if (y->color == RED)
+            {
+                re_color(n->parent);
+                n = n->parent->parent;
+            }
+            // case 2
+            else if (n == n->parent->left)
+            {
+                n = n->parent;
+                right_rotation(t, n);
+            }
+            // case 3
+            else
+            {
+                n->parent->color = BLACK;
+                n->parent->parent->color = RED;
+                left_rotation(t, n->parent->parent);
+            }
+        }
+    }
+
+    t->root->color = BLACK;
+}
+```
 
 
 ## Related

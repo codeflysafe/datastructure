@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-04-11 14:47:41
- * @LastEditTime: 2019-04-17 10:39:54
+ * @LastEditTime: 2019-05-06 20:50:38
  */
 
 #include "include/queue.h"
@@ -91,7 +91,7 @@ CircleQueue *circle_queue_new(int capacity)
     CircleQueue *queue = (CircleQueue *)malloc(sizeof(CircleQueue));
     if (queue == NULL)
         return NULL;
-    queue->elements = malloc(capacity * sizeof(Element));
+    queue->elements =malloc(capacity * sizeof(Element));
     if (queue->elements == NULL)
         return NULL;
     queue->front = 0;

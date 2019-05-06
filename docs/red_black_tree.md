@@ -40,7 +40,7 @@
 
 得证
 
-##调整节点
+## 调整节点
 
 与avl树，类似，红黑树的插入或者删除，可能破坏其平衡(性质)。因此需要进行旋转调整。
 
@@ -58,11 +58,100 @@
 
 
 ### 左旋 and 右旋
-![](https://raw.githubusercontent.com/hsjfans/git_resource/master/20190506121552.png)
+
+![](https://raw.githubusercontent.com/hsjfans/git_resource/master/20190506131550.png)
+
+这些操作只是进行了指针的交换，话费常数时间。
 
 
 
+### Insert element
 
+对于新插入的节点，我们设定它都是红色的，然后采用一些操作，对其平衡性进行调整
+主要的调整方法为:
+
+- recolor
+- rotation
+
+#### 一个例子
+
+先通过一个实例进行详细描述，后面在进行抽象，下面是一个红黑树插入元素15的过程。
+
+
+![](https://raw.githubusercontent.com/hsjfans/git_resource/master/20190506200643.png)
+
+1. 先找到待插入的位置，插入元素15，并将其着色为 红色
+2. 15的祖父节点颜色是黑色，而它的父节点以及叔节点颜色是红色，因此，可以将祖父节点颜色下沉，即重新着色祖父节点为红色，叔节点以及父节点为黑色(case-1)。这时，冲突就变成了 10-18 颜色冲突
+
+
+![](https://raw.githubusercontent.com/hsjfans/git_resource/master/20190506200725.png)
+
+3. 10-18 颜色冲突，且对于节点10来说，它并满足（case-1）的情况，无法进行重着色来满足条件4.此时，采用旋转操作，以节点10进行右旋（case-2），将10-18以及祖父节点在一条直线(看上去)。
+
+![](https://raw.githubusercontent.com/hsjfans/git_resource/master/20190506201351.png)
+4. 再以节点10为节点，进行左旋(case-3)，然后重新着色（次数左子树黑高降低一，因此需要重新着色）
+5. 将跟节点重新着色。
+
+#### 抽象
+
+对于以上可以分为三种状态(或6种，因为左右情况对称)。
+```Insert(x)```,`x` 是插入的节点，`f(x)` 是其父节点，`f(f(x))` 是其祖父节点 `uncle of x as u(x)` 是其叔叔节点（y）。
+
+单线条是黑色节点，双线条是红色
+
+
+
+##### case-1  
+
+![](https://raw.githubusercontent.com/hsjfans/git_resource/master/20190506202531.png)
+
+该情况是，`f(f(x))` 是黑色，`f(x)`是红色，`u(x)`是红色。
+
+此时，可以将其祖父节点(`f(f(x))`)颜色吓成，即变成
+```
+color[f(x)] = BLACK
+color[f(f(x))] = RED
+color[u(x)] = BLACK
+```
+此时，可以解决节点x的颜色冲突。
+
+
+##### case-2
+
+![](https://raw.githubusercontent.com/hsjfans/git_resource/master/20190506203203.png)
+
+此时，节点`y`不是红色，无法通过着色来解决。x 是其父节点的右节点，视觉上看，节点`C-A-B`不再一条直线上，此时采用旋转，来使节点`C-A-B`在一条直线上
+
+```
+
+a->right = c
+c->left = b
+b->parent = c
+a->parent= c->parent
+c->parent = a
+
+```
+
+
+##### case-3
+
+![](https://raw.githubusercontent.com/hsjfans/git_resource/master/20190506204221.png)
+
+节点`y`不是红色，无法通过着色来解决。x 是其父节点的左节点，视觉上看，节点`C-A-B`在一条直线上。此时，可以采用旋转加重着色进行调整。
+
+```
+
+c->left = a->right
+a->right = c
+a->parent=c->parent
+c->parent=a
+c->left=c
+
+color[a] = BLACK
+color[c] = RED
+
+
+```
 
 
 

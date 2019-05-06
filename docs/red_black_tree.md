@@ -274,7 +274,7 @@ void insert_fix_up(RBTree t, RBTreeNode n)
         if (n->parent == n->parent->parent->left)
         {
 
-            RBTreeNode y = n->parent->parent->left;
+            RBTreeNode y = n->parent->parent->right;
             // case-1
             if (y->color == RED)
             {
@@ -298,7 +298,7 @@ void insert_fix_up(RBTree t, RBTreeNode n)
         // right subtree
         else
         {
-            RBTreeNode y = n->parent->parent->right;
+            RBTreeNode y = n->parent->parent->left;
             // case-1
             if (y->color == RED)
             {

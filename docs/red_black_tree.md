@@ -45,14 +45,30 @@
 与avl树，类似，红黑树的插入或者删除，可能破坏其平衡(性质)。因此需要进行旋转调整。
 
 ### 平衡的破坏
+
 我们设定每次插入的元素都是红色节点(这样子可以避免最坏情况的发生)，这样子不会破坏性质1、3、5.
 
 对于性质2的破坏，我们很容易进行识别出来。对于性质4的破坏，我们要进行简单分析一下。
 
+对于更新破坏红黑树特性的问题，有一些调整的方法:
+- BST operation
+- Color changes
+- Restructure the tree via rotation (recolor、lint)
 
-### 左旋
+
+
+### 左旋 and 右旋
+![](https://raw.githubusercontent.com/hsjfans/git_resource/master/20190506121552.png)
 
 
 
 
-### 右旋
+
+
+
+
+## Related
+
+1. [skip_list](./skip_list.md)
+2. [avl_tree](./avl_tree.md)
+3. [Treap](./treap.md)

@@ -1,0 +1,8 @@
+digraph rotation{
+   node[style=filled];
+   m,n,p[shape=triangle]
+   a->{m,n};
+   b->a;
+   b->p;
+   p->{c,g};
+}

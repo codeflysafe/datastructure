@@ -29,9 +29,9 @@
 - [x] [binary_tree](./docs/binary_tree.md)
 - [x] [binary_search_tree](./docs/binary_search_tree.md)
 - [x] [avl_tree](./docs/avl_tree.md)
-- [ ] [red_black_tree](./docs/red_black_tree.md)
-- [ ] [b_tree](./docs/b_tree.md)
-- [ ] [b_plus_tree](./docs/b_plus_tree.md)
+- [x] [red_black_tree](./docs/red_black_tree.md)
+- [x] [b_tree](./docs/b_tree.md)
+- [x] [b_plus_tree](./docs/b_plus_tree.md)
 - [ ] [segment_tree](./docs/segment_tree.md)
 - [ ] [prefix_tree](./docs/prefix_tree.md)
 - [ ]  and other ...

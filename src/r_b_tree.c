@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-04-26 18:27:39
- * @LastEditTime: 2019-05-06 23:12:18
+ * @LastEditTime: 2019-05-07 13:15:32
  */
 
 #include "include/r_b_tree.h"
@@ -185,4 +185,15 @@ void insert_fix_up(RBTree t, RBTreeNode n)
     }
 
     t->root->color = BLACK;
+}
+
+void delete (RBTree t, Element e, compare_func cmp){
+
+
+}
+
+void delete_fix_up(RBTree t, RBTreeNode n){
+
+
+
 }

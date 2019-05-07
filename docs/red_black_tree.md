@@ -65,7 +65,7 @@
 
 
 
-### Insert element
+### Insert element (O(lgN))
 
 对于新插入的节点，我们设定它都是红色的，然后采用一些操作，对其平衡性进行调整
 主要的调整方法为:
@@ -86,10 +86,10 @@
 
 ![](https://raw.githubusercontent.com/hsjfans/git_resource/master/20190506200725.png)
 
-3. 10-18 颜色冲突，且对于节点10来说，它并满足（case-1）的情况，无法进行重着色来满足条件4.此时，采用旋转操作，以节点10进行右旋（case-2），将10-18以及祖父节点在一条直线(看上去)。
+3. 10-18 颜色冲突，且对于节点10来说，它并满足（case-1）的情况，无法进行重着色来满足条件4.此时，采用旋转操作，以节点18进行右旋（case-2），将10-18以及祖父节点在一条直线(看上去)。
 
 ![](https://raw.githubusercontent.com/hsjfans/git_resource/master/20190506201351.png)
-4. 再以节点10为节点，进行左旋(case-3)，然后重新着色（次数左子树黑高降低一，因此需要重新着色）
+4. 再以节点7为节点，进行左旋(case-3)，然后重新着色（次数左子树黑高降低一，因此需要重新着色）
 5. 将跟节点重新着色。
 
 #### 抽象
@@ -143,32 +143,31 @@ c->parent = a
 ```
 
 ```c
-void left_rotation(RBTree t, RBTreeNode a)
+// right rotation
+void right_rotation(RBTree t, RBTreeNode a)
 {
-    RBTreeNode b = a->right;
-    a->right = b->left;
-    if (a->left != NULL)
+    RBTreeNode b = a->parent;
+    a->parent = b->parent;
+    if (b->parent == NULL)
     {
-        b->left->parent = a;
+        t->root = a;
     }
-    b->parent = a->parent;
-    if (a->parent == NULL)
+    else if (b->parent->left == b)
     {
-        t->root = b;
-    }
-    else if (a == b->parent->left)
-    {
-        a->parent->left = b;
+        b->parent->left = a;
     }
     else
     {
-        a->parent->right = b;
+        b->parent->right = a;
     }
-
-    b->left = a;
-    a->parent = b;
+    if (a->right != NULL)
+    {
+        a->right->parent = b;
+    }
+    b->left = a->right;
+    b->parent = a;
+    a->right = b;
 }
-
 
 ```
 
@@ -195,31 +194,32 @@ color[c] = RED
 
 
 ```c
-// right rotation
-void right_rotation(RBTree t, RBTreeNode a)
+void left_rotation(RBTree t, RBTreeNode a)
 {
-    RBTreeNode b = a->parent;
-    a->parent = b->parent;
-    if (b->parent == NULL)
+    RBTreeNode b = a->right;
+    a->right = b->left;
+    if (a->left != NULL)
     {
-        t->root = a;
+        b->left->parent = a;
     }
-    else if (b->parent->left == b)
+    b->parent = a->parent;
+    if (a->parent == NULL)
     {
-        b->parent->left = a;
+        t->root = b;
+    }
+    else if (a == b->parent->left)
+    {
+        a->parent->left = b;
     }
     else
     {
-        b->parent->right = a;
+        a->parent->right = b;
     }
-    if (a->right != NULL)
-    {
-        a->right->parent = b;
-    }
-    b->left = a->right;
-    b->parent = a;
-    a->right = b;
+
+    b->left = a;
+    a->parent = b;
 }
+
 
 ```
 
@@ -326,8 +326,23 @@ void insert_fix_up(RBTree t, RBTreeNode n)
 ```
 
 
+### Deletion (O(lgN))
+
+删除较插入操作更为复杂一些。
+
+
+
+
+
+
 ## Related
 
 1. [skip_list](./skip_list.md)
 2. [avl_tree](./avl_tree.md)
 3. [Treap](./treap.md)
+
+
+## Reference
+
+1. [geeksforgeeks](https://www.geeksforgeeks.org/red-black-tree-set-3-delete-2/)
+2. [r_b_tree](http://ion.uwinnipeg.ca/~ychen2/advancedAD/Red-black%20Tree.pdf)

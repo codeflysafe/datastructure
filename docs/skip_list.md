@@ -265,7 +265,7 @@ void skip_list_delete_node(SkipList *list, SkipListNode *node, SkipListNode **up
 
 1. [avl_tree](./avl_tree.md)
 2. [red_blank_tree](./red_blank_tree.md)
-
+3. [skip list and redis](./skip_list_and_redis.md)
 
 
 ## References

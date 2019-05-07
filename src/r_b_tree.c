@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-04-26 18:27:39
- * @LastEditTime: 2019-05-07 13:15:32
+ * @LastEditTime: 2019-05-07 14:00:45
  */
 
 #include "include/r_b_tree.h"
@@ -58,7 +58,9 @@ void right_rotation(RBTree t, RBTreeNode b)
     else if (b == b->parent->left)
     {
         b->parent->left = a;
-    }else{
+    }
+    else
+    {
         b->parent->right = a;
     }
     a->right = b;
@@ -187,13 +189,38 @@ void insert_fix_up(RBTree t, RBTreeNode n)
     t->root->color = BLACK;
 }
 
-void delete (RBTree t, Element e, compare_func cmp){
-
-
+RBTreeNode look_up_node(RBTree t, Element e, compare_func cmp)
+{
+    RBTreeNode n = t->root;
+    while (n != t->nil)
+    {
+        int p = cmp(e, n->val);
+        if (p == 0)
+        {
+            return n;
+        }
+        else if (p > 0)
+        {
+            n = n->right;
+        }
+        else
+        {
+            n = n->left;
+        }
+    }
+    return NULL;
 }
 
-void delete_fix_up(RBTree t, RBTreeNode n){
+void delete (RBTree t, Element e, compare_func cmp)
+{
+    RBTreeNode n = look_up_node(t, e, cmp);
+    delete_fix_up(t, n);
+}
 
 
 
+void delete_fix_up(RBTree t, RBTreeNode n)
+{
+
+    // todo
 }

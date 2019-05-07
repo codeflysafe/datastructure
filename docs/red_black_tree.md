@@ -331,6 +331,7 @@ void insert_fix_up(RBTree t, RBTreeNode n)
 删除较插入操作更为复杂一些。
 
 
+// todo 
 
 
 
@@ -340,7 +341,7 @@ void insert_fix_up(RBTree t, RBTreeNode n)
 1. [skip_list](./skip_list.md)
 2. [avl_tree](./avl_tree.md)
 3. [Treap](./treap.md)
-
+4. [RBTree and mysql ](./r_b_tree_and_mysql.md)
 
 ## Reference
 

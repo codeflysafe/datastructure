@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-04-24 13:07:51
- * @LastEditTime: 2019-04-26 17:35:48
+ * @LastEditTime: 2019-05-07 18:11:38
  */
 
 #include "include/b_tree.h"
@@ -56,13 +56,22 @@ Position find(Element e, BTree t, compare_func cmp)
 
 Position find_min(BTree t)
 {
+
 }
+
 Position find_max(BTree t)
 {
+    
 }
+
 BTree insert(Element e, BTree t, compare_func cmp)
 {
+    
+
+
 }
+
 BTree remove(Element e, BTree t, compare_func cmp)
 {
+    
 }

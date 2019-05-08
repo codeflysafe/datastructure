@@ -1,0 +1,23 @@
+digraph go{
+  # “apple”、“ipad”、“iphone”、“append””
+   node[style=filled,color=green];
+   60,61[label = "6"];
+   60,61,5,4[color=red];
+   root[color=red]; 
+   a0,a1[label="a"];
+   e0,e1,e3[label="e"];
+   d0,d1[label="d"];
+   n0,n1[label="n"];
+   root->{a0,i};
+   p1,p2,p3[label="p"];
+   a0->p1->p2->{l,e0};
+   i->p3->{a1,h};
+   l->e1;
+   e0->n0->d0;
+   a1->d1;
+   h->o->n1->e3;
+   d0->60;
+   e1->5;
+   d1->4;
+   e3->61;
+}

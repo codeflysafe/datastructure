@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-05-13 11:38:01
- * @LastEditTime: 2019-05-13 17:31:57
+ * @LastEditTime: 2019-05-13 17:42:20
  */
 
 #include "include/hash_table.h"
@@ -51,6 +51,16 @@ search(HashTableNode n, Element key, compare_func cmp)
     }
     return NULL;
 };
+
+void update(HashTableNode n, Element key, Element newVal, compare_func cmp)
+{
+    HashTableNode temp = search(n, key, cmp);
+    if (temp != NULL)
+    {
+        temp->val = newVal;
+    }
+    return;
+}
 
 HashTableNode remove(HashTableNode n, Element key, compare_func cmp)
 {
@@ -167,3 +177,9 @@ void remove_val(HashTable table, Element key, hash_code_func code, compare_func 
     return;
 }
 
+void update_val(HashTable table, Element key, Element newVal, compare_func cmp, hash_code_func code)
+{
+    int idx = get_index(table, key, code);
+    update(table->bucket[idx], key, newVal, cmp);
+    return;
+}

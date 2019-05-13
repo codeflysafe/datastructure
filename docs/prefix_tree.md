@@ -50,11 +50,11 @@
   ```c
   struct trie_node {
        Element val; // 
-       struct trie_node **nodes;
+       struct trie_node *nodes[n];
        boolean isLeaf; // is leaf or not
        };
    ```
-   nodes 是固定长度的一个数组，比如如果是数字，它可以设置为 10 ，字母设置为 26
+   nodes 是固定长度(n)的一个数组，比如如果是数字，它可以设置为 10 ，字母设置为 26
 
 - 链表实现
   上面使用数组实现，可能会造成空间的浪费，所以采用链表来实现
@@ -67,11 +67,13 @@
    ```
    但是，使用链表，去查询是要遍历所以子节点去匹配，降低了查询效率。
 
-
-- 主流的操作是使用 `Double-array Trie`
-  本文也采用此方法。
+- `Double-array Trie`
+  主流的方法，本文也采用此方法。
 
 #### Double-array Trie
+
+  
+
 
 
 ## Related
@@ -83,7 +85,7 @@
 
 - [ trie_database ](https://github.com/hsjfans/trie_database)
 - [ trie_leetcode ](https://github.com/hsjfans/leetcode/src/trie) 
-- [ easy log ](https://github.com/hsjfans/easy_log) 一个分布式日志存储以及搜索框架
+- [ easy log ](https://github.com/hsjfans/easylog) 一个分布式日志存储以及搜索框架
 
 
 ## Reference
@@ -93,3 +95,5 @@
 - [ database system ](https://db.in.tum.de/~leis/papers/ART.pdf) 
 - [trie ](https://www.geeksforgeeks.org/trie-insert-and-search/)
 - [trie](https://segmentfault.com/a/1190000008877595?utm_source=tag-newest)
+- [ trie implements ](https://linux.thai.net/~thep/datrie/)
+- [ darts-java](https://github.com/komiya-atsushi/darts-java)

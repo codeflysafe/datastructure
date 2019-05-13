@@ -24,6 +24,7 @@
         "tree.h": "c",
         "binary_search_tree.h": "c",
         "avl_tree.h": "c",
-        "r_b_tree.h": "c"
+        "r_b_tree.h": "c",
+        "trie.h": "c"
     }
 }

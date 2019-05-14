@@ -1,0 +1,11 @@
+digraph instance{
+ 
+ node[style=filled,shape=record,fontsize = 12];
+ node0[label = "<f0> |<f1> |<f2> |<f3> |<f4> |<f5> 60 |<f6>  17|<f7> 29 |<f8> |<f9> |<f10> "];
+
+ node[label = "<f0> |<f1> |<f2> |<f3> |<f4> 38 |<f5> 60 |<f6>  17|<f7> 29 |<f8> |<f9> |<f10> "];
+
+node0 -> node1[label = " 平方方式，插入 38"]  ;
+
+}
+

@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-02-28 14:40:32
- * @LastEditTime: 2019-05-13 17:24:17
+ * @LastEditTime: 2019-05-14 20:57:39
  */
 #ifndef DATA_STRUCTURE_COMMON_H
 #define DATA_STRUCTURE_COMMON_H
@@ -17,7 +17,7 @@
 #define SKIP_LIST_P 0.24   // p=1/4
 #define IMPACT_FACTOR 0.75 // hash 碰撞比例
 #define EXTEND_FACTOR 2    // hash 扩容比例
-#define DEFAULT_CAPACITY 10
+#define DEFAULT_CAPACITY 11
 #define MAXIMUM_CAPACITY (1 << 30)
 #define STRING_END '/0'
 int max(int a, int b);

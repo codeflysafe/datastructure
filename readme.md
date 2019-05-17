@@ -37,7 +37,7 @@
 - [ ]  and other ...
   
 ### map
-- [ ] [hash_table](./docs/hash_table.md) tree_map;hash_table 
+- [x] [hash_table](./docs/hash_table.md) tree_map;hash_table 
 
 ### heap
 - [ ] [heap](./docs/heap.md) min and max heap

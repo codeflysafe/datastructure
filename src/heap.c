@@ -55,21 +55,19 @@ void delete_min(Heap heap, compare_func cmp)
         return;
     }
     heap->elements[0] = heap->elements[heap->size - 1];
-
     int p = 0;
     heap->size--;
-    while (p < heap->size)
+    while ((p * 2 + 1) < heap->size)
     {
-        int right = 2 * p + 2;
-        int left = right - 1;
-        if (right < heap->size)
+        int left = p * 2 + 1;
+        if (left + 1 < heap->size && (cmp(heap->elements[left + 1], heap->elements[left]) < 0))
         {
-            int temp = cmp(heap->elements[right], heap->elements[left]) < 0 ? right : left;
-            p = cmp(heap->elements[p], heap->elements[temp]) < 0 ? p : temp;
+            left++;
         }
-        else if (left < heap->size)
+        if (cmp(heap->elements[left], heap->elements[p]) < 0)
         {
-            p = cmp(heap->elements[p], heap->elements[left]) < 0 ? p : left;
+            swap(heap->elements[left], heap->elements[p]);
+            p = left;
         }
         else
         {

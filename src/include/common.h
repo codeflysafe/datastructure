@@ -3,7 +3,7 @@
  * @LastEditors: hsjfans
  * @Email: hsjfans.scholar@gmail.com
  * @Date: 2019-02-28 14:40:32
- * @LastEditTime: 2019-05-18 10:44:28
+ * @LastEditTime: 2019-05-18 13:07:29
  */
 #ifndef DATA_STRUCTURE_COMMON_H
 #define DATA_STRUCTURE_COMMON_H
@@ -20,7 +20,7 @@
 #define DEFAULT_CAPACITY 11
 #define MAXIMUM_CAPACITY (1 << 30)
 #define STRING_END '/0'
-#define DEFAULT_HEAP_SIZE 16
+#define DEFAULT_HEAP_SIZE 100
 int max(int a, int b);
 int min(int a, int b);
 

@@ -80,14 +80,17 @@ void insert(Heap heap, Element e, compare_func cmp)
 ![](../asserts/heap/head-d-0.png)
 
 删除最小节点(13)
-
 1. 删除最小节点(13)，使用最后一个元素(31)代替
+   
    ![](../asserts/heap/heap-d-1.png)
    
 2. 开始进行调整，当前节点(31)与它的左右节点(14,16)比较，选取最小的值(14)进行替换
+   
      ![](../asserts/heap/heap-d-2.png)
      ![](../asserts/heap/heap-d-3.png)
+     
 3. 同理，继续向下进行比较，当前节点(31)，与它的左右节点(21,24)比较，选择最小的值(21)进行替换
+   
      ![](../asserts/heap/heap-d-4.png)
      ![](../asserts/heap/head-d-5.png)
    

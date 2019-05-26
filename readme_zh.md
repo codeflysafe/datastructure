@@ -1,4 +1,7 @@
 # data_structure 
+
+![](https://raw.githubusercontent.com/hsjfans/git_resource/master/20190526132608.png)
+
 > [English](./readme.md) [简体中文](./readme_zh.md)
 
 ## 关于英文以及一些复杂数据结构的实现
@@ -14,7 +17,7 @@
 ## `leetcode` 相关
 > 在部分文档中，会涉及到 `leetcode` 的一些题目，它的一些实现请看 
 > [leetcode](https://github.com/hsjfans/leetcode)
-> [online judge](https://github.com/online-judge/leetcode)
+> [online judge](https://github.com/hsjfans/Online-Judge#Leetcode)
 
 本仓库包含了基础的数据结构以及算法，每一种数据结构以及算法都有自己对应的`md`文档，以及参考链接
 
@@ -60,7 +63,7 @@
 
 
 ### set
-- [ ] [set](./docs/set.md) tree_set;...
+- [x] [set](./docs/set.md) tree_set;...
 - [ ] [disjoint_set](./docs/disjoint_set.md)
 
 

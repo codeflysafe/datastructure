@@ -1,4 +1,7 @@
 # data_structure 
+
+![](https://raw.githubusercontent.com/hsjfans/git_resource/master/20190526132608.png)
+
 > [English](./readme.md) [简体中文](./readme_zh.md)
 
 ## Why i writing in English ?
@@ -15,7 +18,7 @@ Unfortunately, I have an **poor English**, so **forgive me**.
 ## Leetcode related
 Some sections may be contact with `leetcode` problems, the implements can be found in:
 -  [leetcode](https://github.com/hsjfans/leetcode)
--  [online judge](https://github.com/online-judge/leetcode)
+-  [online judge](https://github.com/hsjfans/Online-Judge#Leetcode)
 
 
 This repository contains the fundamental data structures and algorithms. 
@@ -23,6 +26,9 @@ This repository contains the fundamental data structures and algorithms.
 Each of them has its own separated `README.MD`,implement and some simply instances of applications ;
 
 **Note that** ⚠️ this project is aimed at learning and researching purposes only, Using in production isn.t the purpose . 
+
+## Outline
+![](https://raw.githubusercontent.com/hsjfans/git_resource/master/20190518111146.png)
 
 
 ## Data Structures
@@ -42,22 +48,54 @@ Each of them has its own separated `README.MD`,implement and some simply instanc
 
 ### tree
 - [x] [tree](./docs/tree.md)
-- [ ] [binary_tree](./docs/binary_tree.md)
-- [ ] [avl_tree](./docs/avl_tree.md)
-- [ ] [heap](./docs/heap.md) min and max heap
-- [ ] [red_black_tree](./docs/red_black_tree.md)
-- [ ] [b_tree](./docs/b_tree.md)
+- [x] [binary_tree](./docs/binary_tree.md)
+- [x] [binary_search_tree](./docs/binary_search_tree.md)
+- [x] [avl_tree](./docs/avl_tree.md)
+- [x] [red_black_tree](./docs/red_black_tree.md)
+- [x] [b_tree](./docs/b_tree.md)
+- [x] [b_plus_tree](./docs/b_plus_tree.md)
 - [ ] [segment_tree](./docs/segment_tree.md)
 - [ ] [prefix_tree](./docs/prefix_tree.md)
 - [ ]  and other ...
   
 ### map
-- [ ] [hash_table](./docs/hash_table.md) tree_map;hash_table 
+- [x] [hash_table](./docs/hash_table.md) tree_map;hash_table 
+
+### heap
+- [x] [heap](./docs/heap.md) 
+- [ ] [d-heap](./dosc/d_heap.md)
+
 
 ### set
-- [ ] [set](./docs/set.md) tree_set;...
+- [x] [set](./docs/set.md) tree_set;...
 - [ ] [disjoint_set](./docs/disjoint_set.md)
 
 
 ### graph
 - [ ] [graph](./docs/graph.md)
+
+
+## Algorithms
+
+### sorting
+
+- [ ] [bubble_sort](./docs/bubble_sort_en.md)
+- [ ] [quick_sort](./docs/quick_sort_en.md)
+  
+
+
+## Testing
+
+- [ ] [array_list](./test/array_list_test.c) 
+- [ ] [linked_list](./test/linked_list_test.c)
+- [ ] [double_linked_list](./test/double_linked_list.c)
+- [ ] [queue](./test/queue.c)
+- [ ] [stack](./test/stack.c)
+- [ ] [skip_list](./test/skip_list.c)
+- [ ] and other ...
+
+
+## Reference
+
+1. << Introduction To Algorithms >>
+2. << Data Structures and Algorithm Analysis in C++ >>

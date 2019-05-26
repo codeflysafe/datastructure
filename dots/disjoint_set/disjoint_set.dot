@@ -1,0 +1,12 @@
+digraph disjoint_set{
+
+   none[shape=cricle,label="-1"];
+   none->{0,1,2,3,4}[style = dashed];
+   4->5[label=" union(4,5) "];
+   6->7[label=" union(6,7) "];
+   4->6[label=" union(5,7) "];
+
+   7->6[color=red,label=" find(7) "];
+   6->4[color=red,label=" find(7) "];
+
+}

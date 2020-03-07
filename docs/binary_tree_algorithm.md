@@ -160,3 +160,71 @@ Output: false
 ```
 
 
+## [Tree Traversals]( https://pintia.cn/problem-sets/994805342720868352/problems/994805485033603072)
+> PAT advanced
+
+给定中序和后序序列，要求输出层序遍历
+这个无需建树，只需要根据后序和中序的特点，即可求出其层序遍历序列
+
+二叉树天然与递归契合
+
+```c++
+#include<iostream>
+#include<map>
+#include<queue>
+using namespace std;
+
+struct Point{
+    int left,right,target;
+};
+
+void pat_1020(){
+
+    int n,i;
+    cin >> n;
+    int postorders[n+1],inorders[n+1];
+    // 记录中序的节点索引值，便于查询位置
+    // 典型的空间换时间的算法
+    map<int,int> ms;
+    for(i=1;i<=n;i++) cin >> postorders[i];
+    for(i=1;i<=n;i++) {
+        cin >> inorders[i];
+        ms[inorders[i]] = i;
+    }
+    
+    // 采用一个队列保存路径
+    int size,mid,left,right,target;
+    // 一个三元组队列 {left,right,target}
+    queue<Point> q;
+    q.push(Point{1,n,n});
+    cout << postorders[n];
+    // 开始模拟层序遍历过程
+    while(!q.empty()){
+        size = q.size();
+        for(i=0;i<size;i++){
+            Point dot = q.front();
+            q.pop();
+            left = dot.left,right = dot.right,target = dot.target;
+            // 放入时打印
+            // 找到目标节点的位置
+            mid = ms[postorders[target]];
+            // 还存在左节点，打印，并放入
+            if(left < mid){
+                cout << " " << postorders[target - (right - mid + 1)];
+                q.push(Point{left,mid-1,target - (right - mid + 1)});
+            }
+            // 还存在右节点，打印，并放入
+            if(right > mid){
+                cout << " " << postorders[target-1];
+                q.push(Point{mid+1,right,target-1});
+            }
+        }
+    }
+}
+
+int main(){
+    pat_1020();
+    return 0;
+}
+
+```

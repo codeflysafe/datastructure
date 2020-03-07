@@ -15,9 +15,10 @@
 4. 由于最近计划考研，所以一些完善估计要放到年末开始，在此之前以广而理解为主
 
 ## `leetcode` 相关
-> 在部分文档中，会涉及到 `leetcode` 的一些题目，它的一些实现请看 
+> 在部分文档中，会涉及到 `leetcode` 等的一些题目，它的一些实现请看 
 > [leetcode](https://github.com/hsjfans/leetcode)
 > [online judge](https://github.com/hsjfans/Online-Judge#Leetcode)
+> [pat](https://github.com/hsjfans/postgraduate-retest)
 
 本仓库包含了基础的数据结构以及算法，每一种数据结构以及算法都有自己对应的`md`文档，以及参考链接
 

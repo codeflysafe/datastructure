@@ -35,8 +35,7 @@
 ```c
 Position single_rotate_with_left(Position k2)
 {
-    Position k1;
-    k1 = k2->left;
+    Position k1 = k2->left;
     k2->left = k1->right;
     k1->right = k2;
 
@@ -59,8 +58,7 @@ Position single_rotate_with_left(Position k2)
 ```
 Position single_retate_with_right(Position k1)
 {
-    Position k2;
-    k2 = k1->right;
+    Position k2= k1->right;
     k1->right = k2->left;
     k2->left = k1;
 
@@ -157,6 +155,13 @@ AvlTree insert(Element e, AvlTree t, compare_func cmp)
     return t;
 }
 
+```
+
+其中 `height` 函数如下：
+```c
+  int height(Position root){
+      return root ? root->height:-1;
+  }
 ```
 
 ## find 

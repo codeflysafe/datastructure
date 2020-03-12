@@ -7,7 +7,7 @@
 #include <assert.h>
 #include "../src/include/array_list.h"
 
-int main(int argc, char *argv[])
+int test(int argc, char *argv[])
 {
     ArrayList *array = array_list_new(0);
 

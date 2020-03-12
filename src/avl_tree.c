@@ -31,8 +31,7 @@ AvlTree make_empty(AvlTree t)
 
 Position single_rotate_with_left(Position k2)
 {
-    Position k1;
-    k1 = k2->left;
+    Position k1 = k2->left;
     k2->left = k1->right;
     k1->right = k2;
 
@@ -43,8 +42,7 @@ Position single_rotate_with_left(Position k2)
 
 Position single_rotate_with_right(Position k1)
 {
-    Position k2;
-    k2 = k1->right;
+    Position k2 = k1->right;
     k1->right = k2->left;
     k2->left = k1;
 
@@ -86,13 +84,9 @@ AvlTree insert(Element e, AvlTree t, compare_func cmp)
         if (height(t->right) - height(t->left) == 2)
         {
             if (cmp(e, t->right->e) > 0)
-            {
                 t = single_rotate_with_right(t);
-            }
             else
-            {
                 t = rotate_with_right_left(t);
-            }
         }
     }
     else
@@ -101,13 +95,9 @@ AvlTree insert(Element e, AvlTree t, compare_func cmp)
         if (height(t->left) - height(t->right) == 2)
         {
             if (cmp(e, t->left->e) < 0)
-            {
                 t = single_rotate_with_left(t);
-            }
             else
-            {
                 t = rotate_with_left_right(t);
-            }
         }
     }
 
@@ -115,13 +105,11 @@ AvlTree insert(Element e, AvlTree t, compare_func cmp)
     return t;
 }
 
-AvlTree remove(Element e, AvlTree t, compare_func cmp)
+AvlTree remove_element(Element e, AvlTree t, compare_func cmp)
 {
     Position p = find(e, t, cmp);
     if (p == NULL)
-    {
         return NULL;
-    }
     p->rate = 0;
     return p;
 }
@@ -181,5 +169,5 @@ AvlTree find_max(AvlTree t)
 
 int height(Position t)
 {
-    return t == NULL ? 0 : t->height;
+    return t == NULL ? -1 : t->height;
 }

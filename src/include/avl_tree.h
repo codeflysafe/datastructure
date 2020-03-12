@@ -25,7 +25,7 @@ AvlTree find_max(AvlTree t);
 
 AvlTree insert(Element e, AvlTree t, compare_func cmp);
 
-AvlTree remove(Element e, AvlTree t, compare_func cmp);
+AvlTree remove_element(Element e, AvlTree t, compare_func cmp);
 
 int height(Position t);
 

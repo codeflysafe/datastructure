@@ -1,2 +1,0 @@
-/Users/sjhuang/Documents/projects/datastructure/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/sjhuang/Documents/projects/datastructure/cmake-build-debug/CMakeFiles/edit_cache.dir

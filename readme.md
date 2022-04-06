@@ -54,8 +54,8 @@ Each of them has its own separated `README.MD`,implement and some simply instanc
 - [x] [red_black_tree](./docs/red_black_tree.md)
 - [x] [b_tree](./docs/b_tree.md)
 - [x] [b_plus_tree](./docs/b_plus_tree.md)
-- [ ] [segment_tree](./docs/segment_tree.md)
-- [ ] [prefix_tree](./docs/prefix_tree.md)
+- [x] [segment_tree](./docs/segment_tree.md)
+- [x] [prefix_tree](./docs/prefix_tree.md)
 - [ ]  and other ...
   
 ### map

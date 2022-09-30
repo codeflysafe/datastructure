@@ -4,28 +4,28 @@
 
 > [English](./readme.md) [简体中文](./readme_zh.md)
 
-## Why i writing in English ?
-As an chinese people, why i writing articles or codes in English.
-The primitive reason as following:
-1. English is the most commonly spoken language in the world.
-2. Improve my English skills in reading and writing.
-3. An medium to communicate with others.
+## Why do I write these in English ?
+As Chinese, why do I write articles and codes in English?
+The primitive reasons are the following:
+1. English is the most commonly used language in the world.
+2. To improve my English skills in reading and writing.
+3. An media to communicate with others.
 
-Unfortunately, I have an **poor English**, so **forgive me**.
+Unfortunately, My English is **poor**, so **never mind**.
 
 **I will fix those articles irregularly until they are acceptable**.
 
 ## Leetcode related
-Some sections may be contact with `leetcode` problems, the implements can be found in:
+Some sections may be related with `leetcode` problems, whose implementations can be found in:
 -  [leetcode](https://github.com/hsjfans/leetcode)
 -  [online judge](https://github.com/hsjfans/Online-Judge#Leetcode)
 -  [pat](https://github.com/hsjfans/postgraduate-retest)
 
-This repository contains the fundamental data structures and algorithms. 
+This repository contains fundamental data structures and algorithms. 
 
-Each of them has its own separated `README.MD`,implement and some simply instances of applications ;
+Each of them has its own separated `README.MD`,implementations and some simple instances of applications ;
 
-**Note that** ⚠️ this project is aimed at learning and researching purposes only, Using in production isn.t the purpose . 
+**Note that** ⚠️ this project is aimed at learning and researching purposes only, Using in production isn't the purpose . 
 
 ## Outline
 ![](https://raw.githubusercontent.com/hsjfans/git_resource/master/20190518111146.png)
